@@ -1,0 +1,17 @@
+[11-Feb-2026 06:53:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function imagecreatefrompng() in /home/naree/public_html/webengine/ajax_captcha/images/image.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/naree/public_html/webengine/ajax_captcha/images/image.php on line 20
+[11-Feb-2026 06:54:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function imagecreatefrompng() in /home/naree/public_html/webengine/ajax_captcha/images/image.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/naree/public_html/webengine/ajax_captcha/images/image.php on line 20
+[11-Feb-2026 06:54:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function imagecreatefrompng() in /home/naree/public_html/webengine/ajax_captcha/images/image.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/naree/public_html/webengine/ajax_captcha/images/image.php on line 20
+[11-Feb-2026 06:55:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function imagecreatefrompng() in /home/naree/public_html/webengine/ajax_captcha/images/image.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/naree/public_html/webengine/ajax_captcha/images/image.php on line 20
+[11-Feb-2026 06:56:51 UTC] PHP Warning:  imagecreatefrompng(): gd-png: libpng warning: iCCP: known incorrect sRGB profile in /home/naree/public_html/webengine/ajax_captcha/images/image.php on line 20

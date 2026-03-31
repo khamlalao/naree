@@ -1,0 +1,32 @@
+.header .setMenu1 > a > span.cL {filter:none\9 !important; display:none\9 !important;}
+.header .setMenu1 > a > span.cR {filter:none\9 !important; display:none\9 !important;}
+.header .setMenu1 > a.action > span.cL, .header .setMenu1 > a:hover > span.cL { left:7px; filter:none\9 !important; display:block\9 !important;}
+.header .setMenu1 > a.action > span.cR, .header .setMenu1 > a:hover > span.cR {right:7px; filter:none\9 !important; display:block\9 !important;}
+
+.header .setMenu2 > a > span.cL {filter:none\9 !important; display:none\9 !important;}
+.header .setMenu2 > a > span.cR {filter:none\9 !important; display:none\9 !important;}
+.header .setMenu2 > a.action > span.cL, .header .setMenu2 > a:hover > span.cL { left:7px; filter:none\9 !important; display:block\9 !important;}
+.header .setMenu2 > a.action > span.cR, .header .setMenu2 > a:hover > span.cR {right:7px; filter:none\9 !important; display:block\9 !important;}
+
+
+.footer .footerInner .boxContentFooter .tel-1557:hover {filter:none\9 !important;}
+.footer .footerInner .boxContentFooter .btnRepair:hover {filter:none\9 !important;}
+.footer .footerInner .boxContentFooter .btnNewsletter:hover {filter:none\9 !important;}
+.footer .footerInner .boxContentFooter .btnEAgency:hover {filter:none\9 !important;}
+.footer .footerInner .boxContentFooter .btnViriyahFan:hover {filter:none\9 !important;}
+
+.content .boxTabContent a > span { filter:none\9 !important; display:none\9 !important;}
+.content .boxTabContent a:hover > span, .content .boxTabContent a.action > span { filter:none\9 !important; display:block\9 !important;}
+
+.home .boxVdo .boxListVdo .boxListVdoSlide a span {filter:none\9 !important; background-image:url(../img/home/btnPlay-ie.png) !important;}
+.home .boxVdo .boxListVdo .boxListVdoSlide a:hover span { filter:none\9 !important; background-image:url(../img/home/btnPlay.png) !important;}
+
+/* 
+customer product home ============================== */
+.product .thumbProduct .bgCircle {
+	filter:none\9 !important; display:none\9 !important;
+}
+.product .thumbProduct:hover .bgCircle, .product .action .bgCircle {filter:none\9 !important; display:block\9 !important;}
+
+
+

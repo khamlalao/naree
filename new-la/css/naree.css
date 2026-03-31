@@ -1,0 +1,2857 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+/*Universal*/
+html,
+body {
+    height: auto;
+    min-height: 100%;
+}
+
+html {
+
+    -webkit-overflow-scrolling: touch;
+
+    -webkit-tap-highlight-color: #f4f4f3;
+
+    -webkit-text-size-adjust: 100%;
+
+    -ms-text-size-adjust: 100%;
+
+}
+
+
+select {
+    text-transform: uppercase
+}
+
+body {
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #111;
+}
+
+#wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#header {
+    width: 100%
+}
+
+#Containner {
+    width: 100%;
+    padding: 30px 0;
+}
+
+
+
+.object_fix {
+    position: fixed;
+    top: 0;
+    z-index: 999
+}
+
+
+
+.content {
+    width: 96%;
+    max-width: 1180px;
+    margin: 0 auto;
+    position: relative
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-weight: bold
+}
+
+.clear {
+    clear: both
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    border: 0
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-grey);
+}
+
+a:hover {
+    text-decoration: none;
+    outline: none
+}
+
+.content * {
+    -webkit-transition: all .2s ease-in-out;
+
+    -moz-transition: all .2s ease-in-out;
+
+    -o-transition: all .2s ease-in-out;
+
+    -ms-transition: all .2s ease-in-out;
+
+    transition: all .2s ease-in-out;
+}
+
+.content *:hover {
+    -webkit-transition: all .2s ease-in-out;
+
+    -moz-transition: all .2s ease-in-out;
+
+    -o-transition: all .2s ease-in-out;
+
+    -ms-transition: all .2s ease-in-out;
+
+    transition: all .2s ease-in-out;
+}
+
+
+
+/*end Universal*/
+
+.logo {
+    width: 110px;
+    float: left;
+}
+
+.logo img {
+    width: 100%
+}
+
+/*.logo:hover { margin-top:-3px;}*/
+
+.header_left {
+    width: 1000px;
+    float: right;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 22px;
+    color: #fff;
+}
+
+ul.menu_top {
+    margin: 0;
+    padding: 0;
+    float: right;
+    width: 70%;
+    font-size: 16px
+}
+
+ul.menu_top li {
+    letter-spacing: 1px;
+    font-family: 'pt_sansboldSVG', 'pt_sansbold';
+    list-style: none;
+    display: block;
+    float: right;
+    margin-right: 4px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+ul.menu_top li a {
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 10px 6px 10px;
+}
+
+ul.menu_top li a.txt-hover {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    padding: 8px 10px 6px 10px;
+}
+
+ul.menu_top li a.txt-hover:hover {
+    background: #4f4f4f;
+    border-radius: 20px;
+    margin-top: -3px;
+    font-size: 14px
+}
+
+ul.menu_top li img {
+    width: 22px;
+    display: inline-block;
+    float: left;
+    margin: -2px 5px 0 0
+}
+
+.num-items {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    top: -12px;
+    left: -2px;
+    display: table-cell;
+    position: absolute;
+    background: #f00;
+    border-radius: 100%;
+    height: 19px;
+    width: 22px;
+    color: #fff;
+    vertical-align: middle;
+    padding-top: 1px;
+    padding-bottom: 3px;
+}
+
+.cart-link {
+    position: relative;
+    display: inline-block;
+}
+
+ul.menu_top li:hover .num-items {
+    margin-top: -3px;
+}
+
+ul.menu_top a.selectNav {
+    background: #4f4f4f;
+    border-radius: 20px;
+    font-size: 14px
+}
+
+ul.menu_top li a.txt-nohover {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 10px 8px 10px;
+    background: #f5f5f5;
+    color: #111;
+    border-radius: 20px
+}
+
+ul.menu_top li a.txt-nohover img {
+    border-radius: 100%
+}
+
+ul.menu_top li a.txt-select {
+    background: #f5f5f5;
+    color: #111;
+    text-align: center;
+    cursor: default;
+    font-size: 14px
+}
+
+ul.menu_top li a.txt-select:hover {
+    color: #111 !important;
+    background: #f5f5f5;
+    font-size: 14px
+}
+
+.lang {
+    font-family: 'saysettha_otregular' !important;
+    font-size: 16px;
+}
+
+
+
+.menu {
+    color: #a3a3a3;
+    font-size: 16px;
+    line-height: 16px;
+    float: right
+}
+
+.menu ul {
+    margin: 15px 0 0 -20px;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 0 0 0 20px;
+    padding: 0;
+    list-style: none;
+    display: block;
+    text-transform: uppercase
+}
+
+.menu ul li a {
+    display: block;
+    padding: 8px 20px 6px 20px;
+    color: #a3a3a3
+}
+
+.menu ul li a:hover {
+    margin-top: -3px
+}
+
+.menu ul li a.selectMn {
+    background: #4f4f4f;
+    border-radius: 20px;
+    color: #fff
+}
+
+.menu ul li a.selectMn:hover {
+    margin-top: 0
+}
+
+
+
+/*footer*/
+
+#footer {
+    width: 100%;
+}
+
+.footer_fix {
+    position: fixed;
+    bottom: 0
+}
+
+.footer-left {
+    float: left;
+    margin-top: 10px;
+}
+
+.footer-left ul {
+    margin: 0 0 0 -10px;
+    padding: 0;
+}
+
+.footer-left ul li {
+    margin: 0 0 0 10px;
+    padding: 0;
+    list-style: none;
+    display: block;
+    float: left
+}
+
+.footer-left ul li a {
+    color: #fff;
+}
+
+.footer-left ul li img {
+    margin: 0 6px
+}
+
+.footer-left ul li:hover img {
+    margin-top: -3px
+}
+
+.box-tooltip {
+    position: absolute;
+    top: -30px;
+    background: #4f4f4f;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: 'pt_sansboldSVG', 'pt_sansbold';
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    z-index: 100;
+    padding: 4px 10px;
+}
+
+.footer-left ul li:hover .box-tooltip {
+    opacity: 1
+}
+
+.footer-right {
+    float: right;
+    text-align: right;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-right img {
+    width: 200px !important;
+    margin-right: 20px;
+}
+
+.footer-right a {
+    color: #fff;
+}
+
+.footer-right a:hover {
+    color: #fff;
+    text-decoration: underline
+}
+
+
+
+
+
+
+
+/*Nav*/
+
+.nav {
+    margin: 0 0 30px 0;
+    text-align: left;
+    color: #000;
+    position: relative
+}
+
+.nav a {
+    color: #7d7d7d;
+}
+
+.nav a:hover {
+    color: #000;
+    text-decoration: underline
+}
+
+.nav a.home {
+    color: #000;
+    font-weight: bold;
+}
+
+.nav img {
+    display: inline;
+    margin: 0 6px -2px 6px
+}
+
+.nav span {
+    color: #7d7d7d;
+    text-decoration: underline
+}
+
+
+
+/*Naree Story*/
+
+.box-story {
+    position: relative;
+    margin-bottom: 50px;
+    z-index: -100;
+    margin-top: 30px;
+}
+
+
+
+
+
+.box-story-caption {
+    position: relative;
+    width: 70%;
+    margin: 0 auto 30px auto;
+}
+
+.box-story-caption-C {
+    color: #555;
+    padding: 10px 0 0 0;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+}
+
+.box-story-caption-L {
+    color: #111;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    font-size: 40px !important;
+    line-height: 40px;
+    font-weight: normal;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+}
+
+.box-story-caption-R {
+    color: #111;
+    top: 0;
+    position: absolute;
+    right: 0;
+    width: 30px;
+    font-size: 40px !important;
+    line-height: 40px;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+}
+
+p.txt-story {
+    margin: 30px 0;
+}
+
+.box-story-year {
+
+    background: #fff;
+
+    padding: 25px;
+    float: left;
+
+
+
+
+
+}
+
+.box-story-year h2 {
+    font-size: 60px;
+    line-height: 60px;
+    color: #434343;
+    margin-bottom: 0;
+    font-family: 'pt_sans_captionregularSVG', 'pt_sans_captionregular';
+}
+
+
+
+.box-story-center {
+    width: 55%;
+    margin: 0 auto 50px auto;
+    position: relative
+}
+
+.box-story-colum {
+    width: 50%;
+    float: left;
+    position: relative;
+    margin-bottom: 50px;
+    top: 0
+}
+
+.post {
+    z-index: 1;
+    position: relative;
+}
+
+
+
+.box-story-year-l {
+
+    background: #fff;
+
+    padding: 25px;
+    float: right;
+
+
+
+}
+
+
+
+
+
+/*Products*/
+
+.product_search {
+    position: absolute;
+    right: 0;
+    top: -8px;
+    width: 25%;
+    z-index: 1000
+}
+
+.product_search input.txt-box {
+    border: 1px solid #666;
+    padding: 8px;
+    background: #fff;
+    color: #111;
+    font-size: 13px;
+    width: 90%;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+}
+
+.product_search input.txt-btn {
+    position: absolute;
+    top: -2px;
+    right: 10px
+}
+
+.contentHolder {
+    position: relative;
+    padding: 0px;
+    width: 100%;
+    height: 423px;
+    overflow: auto;
+}
+
+.spacer {
+    text-align: center
+}
+
+.contentHolder {
+    position: relative;
+    padding: 0px;
+    width: 100%;
+    height: 423px;
+    overflow: auto;
+}
+
+
+.product_model {
+    margin: 0;
+    padding: 0;
+}
+
+ul.model {
+    margin: 0 0 40px 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+ul.model li {
+    margin: 0 0 30px 0;
+    padding: 0 0 20px 0;
+    list-style: none;
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+
+
+.box-model {
+    width: 98%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 0 20px 0;
+    font-size: 14px;
+}
+
+.box-model:hover {
+    border: 2px solid #111;
+}
+
+.box-model img {
+    width: 100%;
+}
+
+.box-model h2 {
+    color: #111;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.box-model h2 a {
+    color: #111;
+}
+
+.box-model:hover h2 {
+    color: #000
+}
+
+.txt-model-r {
+    width: 50%;
+    text-align: left;
+    float: left;
+}
+
+.txt-model-l {
+    width: 50%;
+    text-align: right;
+    float: left;
+}
+
+.txt-model-r strong,
+.txt-model-l strong {
+    color: #000;
+    font-size: 16px;
+}
+
+
+
+.txt-model-price {
+    min-height: 50px;
+    font-weight: normal;
+}
+
+
+
+.txt-model-price span.special {
+    color: #f00;
+    text-decoration: none;
+    display: block
+}
+
+
+
+.tbl-pro-detail {
+    font-size: 14px;
+}
+
+.tbl-pro-detail table {
+    width: 100%;
+}
+
+
+#model-detail {
+    margin: 20px 0;
+}
+
+.model-detail-left {
+    width: 66%;
+    float: left;
+    margin: 0 4% 0 0
+}
+
+ul.model-gallery {
+    margin: 0;
+    padding: 0;
+}
+
+ul.model-gallery li {
+    margin: 0 0 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.model-gallery li img {
+    width: 98%;
+}
+
+.model-detail-right {
+    width: 30%;
+    float: left;
+}
+
+h2.txt-mdel {
+    color: #111;
+    font-size: 22px;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h2.txt-mdel span {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px
+}
+
+h3.txt-price {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 10px 0;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 20px;
+}
+
+h3.txt-price span {
+    text-decoration: none
+}
+
+h3.txt-price span.special {
+    color: #f00;
+    text-decoration: none;
+    font-size: 28px
+}
+
+.model-detail-right p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px
+}
+
+
+.box-tel {
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 18px;
+    margin-top: 30px;
+    border-top: 1px solid #000;
+    padding: 15px 0;
+    border-bottom: 1px solid #000
+}
+
+.box-tel a {
+    color: #111;
+}
+
+
+
+.box-price {
+    margin: 20px 0;
+    font-weight: normal;
+    margin: 10px 0;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 14px;
+}
+
+.normalprice {
+    color: #000;
+    text-decoration: line-through
+}
+
+.specialprice {
+    color: #f00;
+    text-decoration: none;
+    font-size: 18px
+}
+
+
+
+/*Page*/
+
+#page {
+    width: 50%;
+    margin: 40px auto;
+    height: 66px;
+}
+
+#page ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative
+}
+
+#page ul li {
+    text-align: center;
+    list-style: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+#page ul li a.right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#page ul li a.left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 24px;
+}
+
+#page ul li a.left img {
+    display: inline-block
+}
+
+#page ul li a.right:hover {
+    right: -4px;
+}
+
+#page ul li a.left:hover {
+    left: -4px;
+    color: #000
+}
+
+#page ul li.page {
+    text-align: center;
+    display: block;
+    padding: 20px 40px;
+}
+
+#page ul li.page a {
+    display: inline-block;
+    padding: 8px 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#page ul li.page a.selectPage {
+    border: 1px solid #111;
+}
+
+#page ul li.page a:hover {
+    border: 1px solid #000
+}
+
+
+
+
+
+
+
+/*Shop*/
+
+.box-quantity {
+    margin: 0 0 30px 0;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: normal;
+}
+
+.txtbox-quantity {
+    width: 50px;
+    border: 1px solid #000;
+    padding: 10px 0;
+    color: #111;
+    text-align: center;
+    margin: 0;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+}
+
+.box-quantity a {
+    color: #fff;
+    font-weight: normal;
+}
+
+
+
+body.has-active-menu {
+    overflow: hidden;
+}
+
+#box-cart-app {
+    position: fixed;
+    height: 100vh;
+    width: 320px;
+    background: #fff;
+    padding: 0;
+    right: -342px;
+    color: #fff;
+    z-index: 9999;
+    top: 0;
+    box-shadow: 1px 1px 1px #555;
+    overflow: auto;
+    border-left: 2px solid #111
+}
+
+.box-cart-titlebar {
+    position: relative;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 18px;
+    border-bottom: 1px solid #111;
+    padding: 10px 10px
+}
+
+.box-cart-titlebar h2 {
+    color: #111;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+
+.icon-close {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 10px;
+}
+
+.icon-close img {
+    width: 22px;
+}
+
+.icon-close:hover img {
+    opacity: 0.7;
+    cursor: pointer
+}
+
+.your-item {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    background: #ea1d22;
+    color: #fff;
+    text-align: center;
+    top: 6px;
+    border-radius: 100%;
+    padding: 3px;
+}
+
+
+
+.contentHolder_cart {
+    position: relative;
+    padding: 0px;
+    width: 320px;
+    height: 80%;
+    overflow: auto;
+}
+
+.spacer {
+    text-align: center
+}
+
+.dim {
+    background: #FFF;
+    opacity: 0.8;
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    z-index: 9999;
+    display: none
+}
+
+.box-overflow {
+    height: 533px;
+    overflow: auto
+}
+
+
+
+ul.cart-right {
+    margin: 0 0;
+    padding: 0 10px;
+    overflow: auto;
+    font-size: 12px;
+}
+
+ul.cart-right li {
+    margin: 0;
+    list-style: none;
+    padding: 6px 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-right-img {
+    width: 110px;
+    float: left;
+    margin: 0 10px;
+}
+
+.cart-right-img img {
+    width: 100%;
+}
+
+.delete-item {
+    float: left;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 18px;
+    color: #000;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    margin: 50px auto 0 auto
+}
+
+.delete-item a {
+    color: #000
+}
+
+.cart-right-name h2 {
+    color: #111;
+    text-align: center;
+    font-size: 10px;
+    line-height: 15px;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: 6px;
+}
+
+.cart-right-name h2 span {
+    font-size: 9px;
+}
+
+.cart-right-price {
+    width: 130px;
+    float: left;
+    margin: 6px 0 0 0;
+    background: #fff;
+    color: #000;
+    text-align: left;
+}
+
+.cart-right-price h3.txt-price {
+    color: #000;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0 0;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 12px;
+    line-height: 16px
+}
+
+.cart-right-price h3.txt-price span {
+    text-decoration: none
+}
+
+.cart-right-price h3.txt-price span.special {
+    color: #f00;
+    text-decoration: none;
+    font-size: 14px
+}
+
+.cart-right-price .txtbox-quantity {
+    width: 50px;
+    border: 1px solid #000;
+    padding: 5px 0;
+    color: #111;
+    text-align: center;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+}
+
+.cart-right-total {
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 14px;
+    color: #000;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    color: #000;
+    padding: 10px 0 0 0;
+    border-top: 2px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+.cart-right-total .pad {
+    padding: 0 20px 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-right-total .check-out {
+    background: #000;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+    display: blockl;
+    float: right;
+    width: 50%;
+}
+
+.cart-right-total .continue-shop {
+    background: #f5f5f5;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    display: blockl;
+    float: left;
+    width: 50%;
+}
+
+
+
+.cart-no-item {
+    margin: 50% 0 0 0;
+    text-align: center;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+
+a.shop-now {
+    background: #000;
+    width: 70%;
+    margin: 10px auto;
+    display: block;
+    padding: 12px 0 10px 0;
+    color: #fff;
+    text-transform: uppercase
+}
+
+
+
+
+
+ul.cart {
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+
+ul.cart li {
+    margin: 0 0 10px 0;
+    list-style: none;
+    padding: 0 0 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-img {
+    width: 15%;
+    float: left;
+    margin: 0 10px;
+}
+
+.cart-img img {
+    width: 100%;
+}
+
+.cart-name {
+    width: 20%;
+    float: left;
+    margin: 0;
+    padding: 20px 0 0 0
+}
+
+.cart-name h2 {
+    color: #111;
+    text-align: left;
+    font-size: 14px;
+    line-height: 15px;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.cart-price {
+    width: 20%;
+    float: left;
+    margin: 0;
+    font-size: 14px;
+    color: #000;
+    text-align: right;
+    padding: 20px 0 0 0
+}
+
+.cart-price.total {
+    width: 12% !important
+}
+
+.cart-price h3.txt-price {
+    color: #000;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 14px;
+}
+
+.cart--price h3.txt-price span {
+    text-decoration: none
+}
+
+.cart-price h3.txt-price span.special {
+    color: #f00;
+    text-decoration: none;
+    font-size: 14px
+}
+
+.cart-quantity {
+    width: 23%;
+    float: left;
+    margin: 0 auto;
+    padding: 20px 0 0 0
+}
+
+.cart-quantity table {
+    margin: 0 auto
+}
+
+.add-to-cart {
+    width: 25%;
+    float: right;
+    margin: 0 auto;
+    padding: 25px 0 0 0
+}
+
+ul.cart-tbl {
+    margin: 0;
+    padding: 0;
+}
+
+ul.cart-tbl li {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+ul.cart-tbl li ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul.cart-tbl li ul li {
+    margin: 0 0 0 0;
+    padding: 6px 10px;
+    border-right: 1px solid #fff;
+    list-style: none;
+    display: block;
+    float: left;
+    font-size: 14px;
+    background: #f5f5f5
+}
+
+ul.cart-tbl li ul li.tdhead {
+    background: #555;
+    color: #fff
+}
+
+ul.cart-tbl li ul li.tddetail {
+    width: 40%
+}
+
+ul.cart-tbl li ul li.tdprice {
+    width: 18%
+}
+
+ul.cart-tbl li ul li.tdQuantity {
+    width: 18%
+}
+
+ul.cart-tbl li ul li.tdTotal {
+    width: 12%
+}
+
+ul.cart-tbl li ul li.tdTotalPrice {
+    width: 10%
+}
+
+/*News*/
+ul.news-list li.shop-list-w .box-news div.date {
+    margin: 0 0 5px 0 !important;
+}
+
+ul.news-list {
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+ul.news-list li {
+    margin: 0 0 30px 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+ul.news-list li .box-news {
+    border: 0px solid #fff;
+    padding-bottom: 10px;
+    width: 96%;
+    margin: 0 auto
+}
+
+ul.news-list li .box-news:hover {
+    border: 2px solid #111;
+}
+
+ul.news-list li .box-news img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.box-news div.date {
+    position: relative;
+    display: block;
+    font-weight: bold;
+    color: #111;
+    margin: 0 10px 5px 10px;
+    padding: 0
+}
+
+.box-news p.topic-news {
+    font-weight: normal;
+    margin: 0 10px;
+    padding: 0;
+    min-height: 90px;
+}
+
+.icon_new {
+    border-radius: 20px;
+    padding: 2px 7px;
+    position: absolute;
+    right: 0;
+    color: #fff;
+    font-size: 10px;
+    top: -3px;
+    background: #f00
+}
+
+.icon-shop {
+    margin: 0 10px;
+}
+
+.icon-shop img {
+    width: 28px !important;
+    height: 28px !important;
+    margin-bottom: 0 !important
+}
+
+.box-news p.topic-shop {
+    font-weight: normal;
+    margin: 0 10px;
+    padding: 0 0 10px 0;
+    min-height: 50px
+}
+
+
+
+.icon-shop a {
+    color: #111;
+    text-decoration: none
+}
+
+
+
+
+
+.news-cover {
+    float: left;
+    width: 55%;
+}
+
+.news-cover img {
+    width: 98%;
+    margin-bottom: 10px;
+}
+
+.news-detail {
+    float: left;
+    width: 40%;
+    margin-left: 2%
+}
+
+
+
+.news-btn {
+    margin-bottom: 20px;
+}
+
+.news-btn ul {
+    margin: 8px 0 0 0;
+    padding: 0;
+}
+
+.news-btn ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 30%;
+    float: left;
+    display: block;
+    text-align: left;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+
+.news-btn ul li img {
+    display: block;
+    float: left;
+    margin: -8px 7px 0 0;
+}
+
+
+
+.box-news-detail div.date {
+    position: relative;
+    display: block;
+    font-weight: bold;
+    color: #111;
+    margin: 0;
+    padding: 0
+}
+
+.box-news-detail p.topic-news {
+    font-weight: normal;
+    color: #111;
+    margin: 0 0 20px;
+    padding: 0
+}
+
+.news-btn ul li.promo-btn {
+    margin-top: 30px;
+    width: 40%;
+}
+
+.cover-promo img {
+    width: 100%
+}
+
+
+/*Look book*/
+
+ul.lookbok {
+    margin: 0;
+    padding: 0;
+    width: 98%
+}
+
+ul.lookbok li {
+    position: relative;
+    margin: 0 0 6px 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.lookbok li img {
+    width: 100%;
+}
+
+ul.lookbok li .caption {
+    position: absolute;
+    width: 50%;
+    right: 0 !important;
+    text-align: left;
+    z-index: 1000;
+    padding: 80px 0 0 0;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase
+}
+
+ul.lookbok li .caption.left {
+    left: 0;
+    text-align: left
+}
+
+ul.lookbok li .caption .txt-w {
+    width: 80%;
+    margin: 0 auto
+}
+
+ul.lookbok li:hover .txt-w {
+    margin-top: -3px
+}
+
+
+
+h1.txt-lookbook {
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center
+}
+
+.box-lookbook {
+    width: 80%;
+    margin: 20px auto 60px auto;
+}
+
+
+
+/*Contact*/
+
+.contact-form {
+    width: 40%;
+    float: right;
+}
+
+.contact-form h1 {
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-address {
+    width: 55%;
+    float: right;
+    margin-top: 20px;
+    margin-left: 5%;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 16px;
+}
+
+.contact-address h2 {
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+
+
+ul.form-all {
+    margin: 0 0 30px 0;
+    padding: 0;
+    font-family: '' Saysettha OT', ' Noto Sans Lao', sans-serif';
+    font-size: 14px;
+}
+
+ul.form-all li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+ul.form-all li label {
+    display: block;
+    width: 100%;
+    margin-bottom: 0px;
+    position: relative
+}
+
+ul.form-all li label span {
+    color: #f00;
+    font-size: 22px;
+    margin: 0;
+}
+
+ul.form-all li input[type=text] {
+    width: 98%;
+    background: #ddd;
+    border: none;
+    padding: 12px 1%;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+ul.form-all li input[type=password] {
+    width: 98%;
+    background: #ddd;
+    border: none;
+    padding: 12px 1%;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+ul.form-all li textarea {
+    height: 100px;
+    width: 98%;
+    background: #ddd;
+    border: none;
+    padding: 12px 1%;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+ul.form-all li i {
+    font-size: 22px;
+}
+
+ul.form-all li select {
+    width: 100%;
+    background: #ddd;
+    border: none;
+    padding: 12px 0;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+
+
+
+/*BTN*/
+
+.btn-submit {
+    float: left;
+    background: #000;
+    border: 2px solid #000;
+    padding: 6px 21px;
+    color: #fff;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    margin: 0 5px 0 0;
+    display: block
+}
+
+.btn-reset {
+    float: left;
+    background: #ccc;
+    border: 2px solid #ccc;
+    padding: 6px 21px;
+    color: #111;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    margin: 0 5px 0 0;
+    display: block
+}
+
+.btn-login {
+    width: 100%;
+    background: #000;
+    padding: 14px 0 12px 0;
+    color: #fff;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    border: 2px solid #000;
+    margin: 20px auto 5px auto;
+    display: block;
+    text-align: center
+}
+
+.btn-back {
+    width: 100%;
+    background: #ccc;
+    padding: 14px 0 12px 0;
+    color: #111;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    border: 2px solid #ccc;
+    margin: 0 auto 5px auto;
+    display: block;
+    text-align: center
+}
+
+.btn-select {
+    width: 100%;
+    background: #fff;
+    padding: 14px 0 12px 0;
+    color: #fff;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000;
+    text-transform: uppercase;
+    border: 2px solid #000;
+    margin: 20px auto 5px auto;
+    display: block;
+    text-align: center
+}
+
+
+
+.btn-submit:hover,
+.btn-reset:hover,
+.btn-login:hover,
+a.btn-facebook:hover,
+.btn-reset:hover,
+.btn-back:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    border: 2px solid #000;
+    background: #fff;
+    color: #111
+}
+
+
+
+.box-btn {
+    margin: 0 0 10px -10px;
+    min-height: 60px;
+}
+
+a.bth-cart {
+    background: #000;
+    display: block;
+    float: left;
+    padding: 12px 25px 10px 25px;
+    color: #fff;
+    box-shadow: 0 0 3px #ccc;
+    margin: 0 10px
+}
+
+a.bth-cart img {
+    display: block;
+    float: left;
+    margin: -4px 5px 0 0;
+    width: 26px;
+}
+
+a.bth-cart:hover {
+    margin-top: -3px;
+    box-shadow: 0 0 2px #555
+}
+
+
+
+a.bth-wishlist {
+    background: #fff;
+    border: 2px solid #000;
+    display: block;
+    float: left;
+    padding: 10px 28px 8px 23px;
+    color: #111;
+    box-shadow: 0 0 2px #ccc
+}
+
+a.bth-wishlist img {
+    display: block;
+    float: left;
+    margin: -4px 8px 0 0;
+    width: 26px;
+}
+
+a.bth-wishlist:hover {
+    margin-top: -3px;
+    box-shadow: 0 0 2px #555
+}
+
+
+
+a.btn-facebook {
+    background: #264587;
+    color: #fff;
+    border: 2px solid #264587;
+    padding: 9px 0;
+    display: block;
+    width: 50%;
+    margin: 0 auto
+}
+
+a.btn-facebook i {
+    margin-right: 10px;
+    border: 1px solid #fff;
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+
+/*end btn*/
+
+
+
+
+
+ul.map {
+    margin: 40px 0;
+    padding: 0;
+}
+
+ul.map li {
+    list-style: none;
+    display: block;
+    width: 33%;
+    margin: 0 0 0 0;
+    padding: 0;
+    float: left;
+}
+
+ul.map li .box-map {
+    border: 4px solid #111;
+    width: 94%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center
+}
+
+ul.map li .box-map img {
+    display: block;
+    margin: 0 auto
+}
+
+ul.map li:hover .box-map {
+    margin-top: -3px;
+    border: 4px solid #ddd;
+}
+
+
+
+.box-message {
+    width: 70%;
+    margin: 10% auto;
+    padding: 30px 0;
+    letter-spacing: 1px;
+    font-family: 'pt_sansregularSVG', 'pt_sansregular';
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.box-message h1 span {
+    text-transform: uppercase;
+    font-size: 20px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px 10px 10px;
+}
+
+.box-message img {
+    margin: 0 auto
+}
+
+.box-message span.fontSmall {
+    font-size: 14px;
+}
+
+
+
+/*Member*/
+
+.box-content {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.box-content h1 span {
+    text-transform: uppercase;
+    font-size: 24px;
+    padding: 0 10px 10px 10px;
+}
+
+.box-content h2.txt-topic-member {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 0 0 10px 0;
+    font-weight: normal;
+    border-bottom: 1px solid #eee;
+}
+
+.box-content h2.txt-topic-address {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 0 0 0 0;
+    font-weight: normal;
+}
+
+
+
+.box-content h3 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: normal
+}
+
+.box-or {
+    border-bottom: 1px solid #ddd;
+}
+
+.box-or-txt {
+    background: #fff;
+    width: 50px;
+    height: 20px;
+    margin: 0 auto -10px auto;
+    color: #ddd
+}
+
+.box-content h3 span {
+    color: #f00
+}
+
+.box-login {
+    margin: 30px auto;
+    width: 50%;
+    text-align: left
+}
+
+.box-login-colum {
+    margin: 30px 5% 0 0;
+    width: 40%;
+    text-align: left;
+    float: left;
+}
+
+.box-login-colum-r {
+    width: 50%;
+    margin: 30px 0;
+    float: left;
+}
+
+.box-member-left {
+    width: 23%;
+    float: left;
+    text-align: center
+}
+
+ul.mn-account {
+    margin: 0 0 0 -20px;
+    padding: 0;
+}
+
+ul.mn-account li {
+    margin: 0 0 0 20px;
+    padding: 0;
+    list-style: none;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'pt_sansregularSVG', 'pt_sansregular';
+    font-size: 16px;
+    line-height: 16px
+}
+
+ul.mn-account li.account {
+    margin-bottom: 20px;
+}
+
+ul.mn-account li a {
+    display: block;
+    padding: 14px 0 10px 0;
+    color: #a3a3a3;
+    background: #ddd;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    color: #111
+}
+
+ul.mn-account a:hover {
+    background: #eee;
+    border-radius: 20px;
+    color: #111
+}
+
+ul.mn-account a.selectAcc {
+    background: #4f4f4f;
+    border-radius: 20px;
+    color: #fff
+}
+
+ul.mn-account a.selectAcc:hover {
+    margin-top: 0
+}
+
+ul.mn-account li img {
+    border-radius: 100%;
+    margin: 0 auto 10px auto
+}
+
+
+
+
+
+.cart-right-name h2.txt-mdel span {
+    margin-top: 0
+}
+
+
+
+
+
+
+
+.box-member-right {
+    width: 72%;
+    float: left;
+    margin-left: 5%;
+    min-height: 400px;
+}
+
+.box-address {
+    background: #f5f5f5;
+    padding: 20px 10px 1px 10px;
+    margin-bottom: 40px;
+}
+
+a.box-add-address {
+    display: block;
+    border: 2px solid #444;
+    padding: 30px 0;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    color: #444
+}
+
+a.box-add-address:hover {
+    border: 2px solid #111;
+    color: #111
+}
+
+.box-edit-address {
+    float: right;
+    font-size: 14px;
+}
+
+
+
+ul.box-order-tbl {
+    margin: 0;
+    padding: 0;
+}
+
+ul.box-order-tbl li {
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+ul.box-order-tbl li ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul.box-order-tbl li ul li {
+    margin: 0 0 0 0;
+    padding: 10px 0;
+    letter-spacing: normal;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    list-style: none;
+    display: block;
+    float: left;
+    width: 16.4%;
+    font-size: 14px;
+    background: #ddd
+}
+
+ul.box-order-tbl li ul li.tdhead {
+    background: #555;
+    color: #fff
+}
+
+
+
+.step-shop {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    margin: 0 auto 30px auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-size: 16px;
+    line-height: 16px
+}
+
+.num-step {
+    text-align: center;
+    font-size: 22px;
+    background: #ddd;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    display: table-cell;
+    border-radius: 100%;
+    margin: 0 10px 0 0;
+    color: #fff
+}
+
+.step-shop td {
+    padding-right: 10px;
+    color: #ddd
+}
+
+.step-shop td.disable td {
+    color: #111 !important
+}
+
+.step-shop td.disable .num-step {
+    background: #111;
+    color: #fff
+}
+
+
+
+.colum-pay {
+    width: 45%;
+    float: left;
+    margin: 0 2%;
+}
+
+
+
+.box-summary {
+    border: 3px solid #555;
+    background: #fff;
+    box-shadow: 0 0 2px #ccc;
+    text-align: left;
+    padding: 20px;
+}
+
+.box-summary ul {
+    margin: 0;
+    padding: 0;
+}
+
+.box-summary ul li {
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.box-summary ul li span {
+    display: block;
+    float: right;
+    text-align: right
+}
+
+
+
+/*how*/
+
+
+
+ul.step-how {
+    margin: 0 auto 50px auto;
+    padding: 0;
+    position: relative;
+    width: 70%;
+}
+
+ul.step-how li {
+    margin: 0 0 0 30px;
+    padding: 20px 0 0 0;
+    list-style: none;
+    width: 70px;
+    height: 50px;
+    vertical-align: middle;
+    display: block;
+    float: left;
+    text-align: center;
+    background: #ddd;
+    color: #fff;
+    border-radius: 100%;
+    font-family: 'pt_sansregularSVG', 'pt_sansregular';
+    font-size: 16px;
+    line-height: 18px;
+    cursor: pointer
+}
+
+ul.step-how li.active {
+    background: #111;
+    color: #fff;
+}
+
+.line_step {
+    border-bottom: 1px dashed #ccc;
+    height: 2px;
+    width: 90%;
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    z-index: -1
+}
+
+h1.txt-step {
+    font-family: 'pt_sansregularSVG', 'pt_sansregular';
+    font-size: 24px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.box-step {
+    text-align: center;
+}
+
+.box-step p {
+    text-align: center;
+}
+
+.box-num-step {
+    border-radius: 100%;
+    margin-bottom: 5px;
+    width: 30px;
+    height: 30px;
+    background: #f00;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.box-img-step {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.box-img-step img {
+    width: 100%;
+    border: 4px solid #000;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+
+
+#shop-list {
+    margin: 40px 0;
+}
+
+h2.txt-shop-list {
+    font-family: 'pt_sansregularSVG', 'pt_sansregular';
+    font-size: 20px;
+    padding-bottom: 0;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase
+}
+
+
+
+ul.shop-list {
+    margin: 0;
+    padding: 0;
+}
+
+ul.shop-list li {
+    margin: 0 0 3px 0;
+    padding: 0;
+    list-style: none
+}
+
+ul.shop-list li a {
+    margin: 0;
+    padding: 8px 0;
+    color: #111;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #fff;
+}
+
+ul.shop-list li a:hover {
+    border-bottom: 1px solid #111;
+}
+
+ul.news-list li.shop-list-w {
+    margin: 0 0 30px 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    float: left;
+    width: 33%;
+}
+
+ul.news-list li.shop-list-w .box-news p {
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+
+ul.news-list li.shop-list-w .box-news {
+    border: 0px solid #fff;
+    width: 90%;
+    margin: 0 auto
+}
+
+ul.news-list li.shop-list-w .box-news:hover {
+    border: 0px solid #fff;
+}
+
+
+
+a.google {
+    border-radius: 20px;
+    background: #ddd;
+    color: #000;
+    padding: 6px 0;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin: 10px auto 5px auto;
+}
+
+a.google:hover {
+    background: #000;
+    color: #fff
+}
+
+
+
+/*Flexslider*/
+
+.flexslider ul.slides li img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.flex_rea {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.flex_rea h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    color: #fff;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/*.flex_abs1 { position:absolute; bottom:215px; right:220px; z-index:99999; }
+
+.flex_abs2 { position:absolute; top:215px; right:220px; z-index:99999; }
+
+.flex_abs3 { position:absolute; top:315px; left:105px; z-index:99999; }
+
+.flex_abs4 { position:absolute; bottom:260px; right:330px; z-index:99999; }
+
+.flex_abs5 { position:absolute; top:190px; right:330px; z-index:99999; }*/
+
+
+
+.flex_abs1 {
+    position: absolute;
+    bottom: 30%;
+    right: 12%;
+    z-index: 99999;
+}
+
+.flex_abs2 {
+    position: absolute;
+    top: 30%;
+    right: 12%;
+    z-index: 99999;
+}
+
+.flex_abs3 {
+    position: absolute;
+    top: 44%;
+    left: 7%;
+    z-index: 99999;
+}
+
+.flex_abs4 {
+    position: absolute;
+    bottom: 44%;
+    right: 23%;
+    z-index: 99999;
+}
+
+.flex_abs5 {
+    position: absolute;
+    top: 30%;
+    right: 25%;
+    z-index: 99999;
+}
+
+#member-profile label {
+    display: inline
+}
+
+.subpro {
+    display: none
+}
+
+.show-mobile {
+    display: none !important
+}
+
+.img-story {
+    margin: 30px auto;
+    width: 50%;
+}
+
+#mn-mobile {
+    display: none
+}
+
+/*promotion*/
+
+ul.promotion-all {
+    margin: 0;
+    padding: 0;
+}
+
+ul.promotion-all li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 46%;
+    float: left;
+}
+
+ul.promotion-all li:last-child {
+    float: right
+}
+
+ul.promotion-all li img {
+    width: 100%;
+}
+
+ul.promotion-all li .box-cation-promo-app {
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+ul.promotion-all li .box-cation-promo {
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    letter-spacing: 4px;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 43px;
+    color: #fff;
+    margin: 30% auto 0 auto;
+    width: 70%;
+    border: 1px solid #d7d7d7;
+    padding: 25px 0 20px 0;
+    text-align: center;
+}
+
+ul.promotion-all li:hover .box-cation-promo-app {
+    background: rgba(0, 0, 0, 0.8)
+}
+
+ul.promotion-all li:last-child .box-cation-promo {
+    margin: 26% auto 0 auto;
+    width: 50%;
+}
+
+
+/* Color Palette */
+html,
+
+:root {
+    --bg-pink: #f6ebe8;
+    --dark-grey: #6a6a6a;
+    --nav-grey: #8d8583;
+    --text-white: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    background-color: var(--bg-pink);
+    color: var(--dark-grey);
+    /* Match the exact light pink of your design */
+}
+
+/* If the menu is open, hide scrollbar on the main page */
+
+/* Update your globals.css */
+.header,
+.footer {
+    padding: 10px 5% 10px !important;
+}
+
+
+.main-content {
+    flex: 1;
+    /* This tells the main section to grow and take up all available space */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This makes the image fill the area without stretching */
+}
+
+/* Header & Top Icons */
+.header {
+    position: static;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #f3d6cc;
+    box-sizing: border-box;
+}
+
+.header-top {
+    padding: 0px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.header-right-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Space between icons and hamburger */
+}
+
+.top-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.top-icons a {
+    letter-spacing: 1px;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    display: block;
+    float: right;
+    margin-right: 4px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.top-icons img,
+.banner-social img {
+    display: block;
+    height: auto;
+    max-height: 20px;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #6a6a6a;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* icon button */
+.menu-btn {
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+    margin-left: auto;
+}
+
+/* hide X icon by default */
+.menu-btn .fa-times {
+    display: none;
+}
+
+/* mobile menu */
+.menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.lang-switch {
+    align-items: center;
+    font-size: 20px !important;
+    font-weight: bold;
+    display: flex;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    padding-top: 6px;
+}
+
+/* Ensure the parent is the anchor */
+/* --- CLEANED NAVIGATION --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #8d8583;
+    color: white;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    display: flex;
+    align-items: center;
+    min-width: 160px;
+    gap: 25px;
+
+    /* 🔥 IMPORTANT FIX */
+    border: none;
+    outline: none;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+
+.dropdown:hover .dropbtn {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: stretch;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+    /* Fixes the white line issue at the bottom */
+}
+
+.dropdown-content a {
+    color: #6a6a6a;
+    padding: 8px 20px !important;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a .arrow {
+    font-size: 25px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-content a:hover .arrow {
+    transform: translateX(5px);
+    color: #8d8583;
+}
+
+.dropbtn i {
+    display: inline-block;
+    font-size: 20px;
+    transform: rotate(0deg);
+    transition: 0.3s ease;
+}
+
+/* default hidden */
+.dropdown-content {
+    display: none;
+}
+
+/* when checked → show */
+#products-toggle:checked~.dropdown-content {
+    display: block;
+}
+
+/* rotate arrow */
+#products-toggle:checked+.dropbtn i {
+    transform: rotate(180deg);
+}
+
+/* hide checkbox */
+#products-toggle {
+    display: none;
+}
+
+
+.banner-social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0px 20px;
+}
+
+.main-nav {
+    margin-top: 15px;
+}
+
+.nav-right {
+    justify-content: right;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    justify-content: right;
+}
+
+.pill-btn {
+    text-decoration: none;
+    color: #6a6a6a;
+    font-size: 16px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    line-height: 16px;
+}
+
+.pill-btn:hover {
+    background-color: #8d8583;
+    color: white;
+}
+
+.pill-btn.active {
+    background-color: #8d8583;
+    color: white;
+    cursor: default;
+}
+
+
+.hero-container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+
+.hero-left {
+    padding-top: 60px !important;
+    flex: 0.8;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    left: -10%;
+}
+
+.hero-left h1 {
+    position: relative;
+    font-size: 70px;
+    line-height: 1 !important;
+    color: #7a7a7a;
+    z-index: 2;
+}
+
+.new-text {
+    color: #d0b4ac !important;
+}
+
+
+.hero-right {
+    flex: 1.2;
+}
+
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    background-color: #f3d6cc !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 5%;
+    /* Matches the Header padding */
+    font-size: 14px;
+    border-top: 1px solid #e5d5d1;
+
+}
+
+.footer-container {
+    display: contents;
+    width: 96%;
+    max-width: 1180px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-section-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.footer-section-1-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-right: 20px;
+}
+
+.footer-section-1-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-section-3 {
+    text-align: right;
+    line-height: 1.4;
+}

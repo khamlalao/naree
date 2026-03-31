@@ -1,0 +1,91 @@
+.dropdown,
+.dropdown li,
+.dropdown a {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;font-family: 'saysettha_otregular';
+}
+
+/* Menu */
+.dropdown {
+	/*width: 100%;*/
+}
+
+.dropdown li {
+	position: relative;
+	list-style: none;
+	float: left;
+	display: block;font-family: 'saysettha_otregular';
+}
+
+/* Links */
+
+.dropdown li ul li a {
+	display:block;
+	margin: 0;
+	text-decoration: none;
+    font-family: 'saysettha_otregular';
+	font-size:16px; text-align:left;
+	line-height:16px;
+	text-transform:uppercase;
+	color: #333333 !important;
+	background:#e4e4e4; border-radius:26px;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	font-weight:normal !important 
+}
+
+.dropdown li:first-child a { border-left: none; }
+.dropdown li:last-child a { border-right: none; }
+
+.dropdown li ul li a:hover { background:#313131; color:#fff !important; margin-top:0 }
+
+/* Sub Menu */
+
+.dropdown ul {
+	position: absolute;
+	z-index:9999 !important;font-family: 'saysettha_otregular';
+	top:34px;
+	left:-30px;
+	opacity:0;
+
+	-webkit-transition: opacity .25s ease .1s;
+	-moz-transition: opacity .25s ease .1s;
+	-o-transition: opacity .25s ease .1s;
+	-ms-transition: opacity .25s ease .1s;
+	transition: opacity .25s ease .1s;
+}
+
+.dropdown li:hover ul { opacity: 1; }
+.dropdown ul li {
+	height:0;
+	overflow: hidden;
+	margin:0 !important;
+	padding:0 !important;
+	-webkit-transition: height .50s ease .1s;
+	-moz-transition: height .50s ease .1s;
+	-o-transition: height .50s ease .1s;
+	-ms-transition: height .50s ease .1s;
+	transition: height .50s ease .1s;
+}
+
+.dropdown li:hover > ul li {
+	width:197px;
+	height:46px;
+	margin:0;
+	overflow: visible;font-family: 'saysettha_otregular';
+}
+
+.dropdown ul li a {
+	width:187px;font-family: 'saysettha_otregular';
+	height:15px;
+	margin:0 0 0 0;
+	padding:15px 25px !important;
+	text-align:left;
+}
+ 
+.dropdown ul li:last-child a { border: none; }

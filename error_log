@@ -1,0 +1,20 @@
+[11-Feb-2026 13:34:21 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/naree/public_html/test_connection.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/naree/public_html/test_connection.php on line 18
+[11-Feb-2026 13:35:10 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/naree/public_html/test_connection.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/naree/public_html/test_connection.php on line 18
+[11-Feb-2026 13:37:35 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_report() in /home/naree/public_html/test_connection.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/naree/public_html/test_connection.php on line 21
+[11-Feb-2026 13:39:42 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_report() in /home/naree/public_html/test_connection.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/naree/public_html/test_connection.php on line 20
+[11-Feb-2026 13:41:44 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/naree/public_html/test_connection.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/naree/public_html/test_connection.php on line 24

@@ -1,0 +1,233 @@
+<?php
+// 1. Load the ADOdb Library (Adjust the path to where your adodb5 folder is)
+require_once('library/adodb5/adodb.inc.php');
+require_once('library/adodb5/adodb-active-record.inc.php');
+
+// 2. Load your configuration and connection
+require_once('library/config/config.php');
+require_once('library/config/connect.php');
+
+// 3. Test if the database is working
+if (!$db) {
+    die("Database connection failed.");
+}
+
+// EXAMPLE: Fetch something from your database
+// $result = $db->Execute("SELECT * FROM your_table_name LIMIT 1");
+?>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAREE Official Store</title>
+    <link rel="stylesheet" href="underrenovation/style.css" />
+    <link rel="stylesheet" href="underrenovation/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="fonts/stylesheet.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@300;700;900&family=Noto+Serif+Lao&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/underrenovation/style.css" />
+    <link rel="stylesheet" href="/underrenovation/responsive.css" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>:: NAREEHANDBAGS ::</title>
+
+
+<link rel="shortcut icon" href="/favicon.ico" />
+
+</head>
+
+<body>
+     <div class="page-wrapper">
+        <div id="header-placeholder"></div>
+        <div id="hero-placeholder"></div>
+        <div id="footer-placeholder"></div>
+        <body>
+  <div class="page-wrapper">
+
+    <header class="header">
+  <div class="header-top">
+    <div class="brand-logo">
+      <img
+        src="./underrenovation/images/Naree_Logo.svg"
+        alt="NR NAREE"
+      />
+    </div>
+    <div class="header-right-group">
+      <div class="nav-right">
+        <div class="top-icons">
+          <img
+            src="./underrenovation/images/home_header-icon.svg"
+          />
+          <div class="banner-social">
+            <a href="https://www.facebook.com/nareehandbags" target="_blank">
+              <img
+                src="./underrenovation/images/facebook_icons.svg"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/nareehandbags/?hl=th"
+              target="_blank"
+            >
+              <img
+                src="./underrenovation/images/instagram.svg"
+              />
+            </a>
+            <a href="https://www.tiktok.com/@naree.official" target="_blank">
+              <img
+                src="./underrenovation/images/tiktok-icon.png"
+              />
+            </a>
+            <a href="https://wa.me/8562023071333" target="_blank">
+              <img
+                src="./underrenovation/images/whatsapp-line-1.svg"
+              />
+            </a>
+            <a href="https://line.me/R/ti/p/nareehandbag" target="_blank">
+              <img
+                src="./underrenovation/images/line.svg"
+              />
+            </a>
+          </div>
+          <img
+            src="./underrenovation/images/user_add_icons.svg"
+          />
+          <img
+            src="./underrenovation/images/Register.svg"
+          />
+
+          <span class="lang-switch">ພາສາລາວ</span>
+        </div>
+        <nav class="main-nav">
+          <ul class="nav-links">
+            <li class="dropdown">
+              <button class="dropbtn">
+                ALL PRODUCTS <i class="fa-solid fa-chevron-up"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">BAGS <span class="arrow">→</span></a>
+                <a href="#">CLOTHES <span class="arrow">→</span></a>
+                <a href="#">ACCESSORIES <span class="arrow">→</span></a>
+              </div>
+            </li>
+            <li><a href="#" class="pill-btn">EXCLUSIVE</a></li>
+            <li><a href="#" class="pill-btn">TIPS</a></li>
+            <li><a href="#" class="pill-btn">PROMOTION</a></li>
+            <li><a href="#" class="pill-btn">STORY</a></li>
+            <li><a href="#" class="pill-btn">LOOK BOOK</a></li>
+            <li><a href="#" class="pill-btn">CONTACT US</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="right-fa-bars">
+        <input type="checkbox" id="menu-toggle" class="dropdown-checkbox" />
+        <label for="menu-toggle" class="menu-btn">
+          <img
+            src="./underrenovation/images/Register.svg" class="register-icon"
+          />
+          <i class="fa fa-bars"></i>
+          <i class="fa fa-times"></i>
+        </label>
+        <div class="menu">
+          <ul>
+            <li class="dropdown">
+              <input type="checkbox" id="products-toggle" />
+
+              <label for="products-toggle" class="dropbtn">
+                ALL PRODUCTS <i class="fa-solid fa-chevron-up"></i>
+              </label>
+              <div class="dropdown-content">
+                <a href="#">BAGS <span class="arrow">→</span></a>
+                <a href="#">CLOTHES <span class="arrow">→</span></a>
+                <a href="#">ACCESSORIES <span class="arrow">→</span></a>
+              </div>
+            </li>
+            <div class="icon-name-menu">
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">LOGIN</a></li>
+              <li><a href="#">FACEBOOK</a></li>
+              <li><a href="#">INSTAGRAM</a></li>
+              <li><a href="#">TIKTOK</a></li>
+              <li><a href="#">INSTAGRAM</a></li>
+              <li><a href="#">LINE</a></li>
+              <li><a href="#">ADD USER</a></li>
+            </div>
+
+            <li><a href="#">EXCLUSIVE</a></li>
+            <li><a href="#">TIPS</a></li>
+            <li><a href="#">PROMOTION</a></li>
+            <li><a href="#">STORY</a></li>
+            <li><a href="#">LOOK BOOK</a></li>
+            <li><a href="#">CONTACT US</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+     <main class="hero-container">
+        <div class="hero-left">
+          <h1>NEW<br />COLLECTIONS</h1>
+          <div class="butterfly-bg">
+            <img
+              src="./underrenovation/images/bg_water.svg"
+              class="bg_water"
+            />
+          </div>
+        </div>
+        <div class="hero-right">
+          <img
+            src="./underrenovation/images/banner_img.svg"
+            alt="Featured Product"
+          />
+        </div>
+      </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-section-1">
+            <div class="footer-section-1-left">
+              <img
+                src="./underrenovation/images/How _to_buy_online_icon.svg"
+              />
+              HOW TO BUY ONLINE &nbsp;
+            </div>
+            <div class="footer-section-1-right">
+              <img
+                src="./underrenovation/images/location_icon.svg"
+              />SHOPS
+            </div>
+          </div>
+          <div class="footer-section-2">
+            Tel +856 21-261 613 | Naree's Payment Policy
+          </div>
+          <div class="footer-section-3">
+            © 2023 Naree All Rights Reserved.<br />
+            Webdesign by SVENG IT & 1001Click.
+          </div>
+        </div>
+      </footer>
+
+  </div>
+</body>
+
+</html>
