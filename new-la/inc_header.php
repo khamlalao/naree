@@ -27,17 +27,13 @@ ADOdb_Active_Record::SetDatabaseAdapter($db);
 // status 1 = 'la' , 2 = 'en' , 3 = 'all'
 
 $sql = "SELECT * FROM product_categories m WHERE 1 = 1 AND (m.status = '1' OR  m.status = '3') ORDER BY m.sequence ASC";
-$stmt = $db->Prepare($sql);
-
-$rs = $db->Execute($stmt);
-
-$itemList = $rs->GetAssoc();
-
-$itemListCount = $rs->maxRecordCount();
+$rs = $db->Execute($sql);
+$itemList = $rs ? $rs->GetAssoc() : [];
+$itemListCount = $rs ? $rs->maxRecordCount() : 0;
 
 
 
-if ($_SESSION['session_login'] != NULL) {
+if (isset($_SESSION['session_login']) && $_SESSION['session_login'] != NULL) {
 
   //$sql2 = "SELECT * FROM session_orders m WHERE 1 = 1 AND m.session_code =  ? AND (m.invoice_id = '' OR m.invoice_id IS NULL) AND (m.invoice_code = '' OR m.invoice_code IS NULL) ";
 
@@ -66,16 +62,12 @@ if ($_SESSION['session_login'] != NULL) {
       $.get('inc_your_item.php', {
         time: new Date().getTime()
       }, function(data) {
-        // Trim whitespace to ensure parseInt doesn't fail
-        var count = parseInt($.trim(data)) || 0;
-        var badge = $('#yourcart-num');
+        var count = parseInt(data) || 0;
 
         if (count <= 0) {
-          // ✅ FIX: Clear content and hide to remove the "empty" red circle
-          badge.empty().hide().text('');
+          $('#yourcart-num').hide();
         } else {
-          // ✅ FIX: Use .text() to overwrite any nested spans with just the number
-          badge.text(count).show();
+          $('#yourcart-num').show().text(count);
         }
       });
     }
@@ -91,7 +83,7 @@ if ($_SESSION['session_login'] != NULL) {
     $('#add2Cart').click(function() {
 
       var num = parseInt($('#amount').val()) || 1;
-      var id = '<?php echo $this->id ?>';
+      var id = '<?php echo isset($_GET["id"]) ? htmlspecialchars($_GET["id"]) : "" ?>';
 
       $.get('inc_cart_add.php', {
         id: id,
@@ -209,7 +201,7 @@ if ($_SESSION['session_login'] != NULL) {
 <header class="header">
   <div class="header-top">
     <div class="brand-logo">
-      <a href="index.php" target="_blank">
+      <a href="index.php" >
         <img
           src="/underrenovation/images/Naree_Logo.svg"
           alt="NR NAREE" />
@@ -237,7 +229,7 @@ if ($_SESSION['session_login'] != NULL) {
             </a>
             <a href="https://www.tiktok.com/@naree.official" target="_blank">
               <img
-                src="/underrenovation/images/tiktok-icon.png" />
+                src="/underrenovation/images/tiktok_icon_3.png" />
             </a>
             <a href="https://wa.me/8562023071333" target="_blank">
               <img
@@ -248,7 +240,7 @@ if ($_SESSION['session_login'] != NULL) {
                 src="/underrenovation/images/line.svg" />
             </a>
           </div>
-          <a href="member_login.php" target="_blank">
+          <a href="member_login.php">
             <img
               src="/underrenovation/images/user_add_icons.svg" />
           </a>

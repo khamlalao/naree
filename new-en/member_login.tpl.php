@@ -197,7 +197,7 @@ function SetAction(url,fname) {
 
     	<div class="box-map">
 
-    	<img src="images/icon/i_q.png"   alt=""/>
+    	<img src="images/icon/i_forgot_3.png"   alt=""/>
 
         <p>FORGOT PASSWORD</p>
 
@@ -205,7 +205,7 @@ function SetAction(url,fname) {
 
     <li><a href="register.php"><div class="box-map">
 
-    <img src="images/icon/i_register.png"  alt=""/>
+    <img src="images/icon/i_register_3.png"  alt=""/>
 
         <p>REGISTER NOW</p>
 

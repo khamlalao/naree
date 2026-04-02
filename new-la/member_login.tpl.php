@@ -396,7 +396,7 @@ function SetAction(url,fname) {
 
 
 
-    	<img src="images/icon/i_q.png"  alt=""/>
+    	<img src="images/icon/i_forgot_3.png"  alt=""/>
 
 
 
@@ -412,7 +412,7 @@ function SetAction(url,fname) {
 
 
 
-    <img src="images/icon/i_register.png"   alt=""/>
+    <img src="images/icon/i_register_3.png"   alt=""/>
 
 
 

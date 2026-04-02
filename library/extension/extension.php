@@ -1,5 +1,4 @@
 <?php
-
 function datediff2($interval, $datefrom, $dateto, $using_timestamps = false)
 {
   /*
@@ -1146,26 +1145,26 @@ function encodePath($sIn)
 }
 function decodePath($sIn)
 {
-    $abfrom = ""; // Initialize first to avoid errors
-    for ($x = 0; $x <= 25; $x++) $abfrom .= chr(65 + $x);
-    for ($x = 0; $x <= 25; $x++) $abfrom .= chr(97 + $x);
-    for ($x = 0; $x <= 9; $x++)  $abfrom .= $x;
-    
-    $abto = substr($abfrom, 13) . substr($abfrom, 0, 13);
-    $decode = ""; // Initialize first
-    
-    for ($x = 0; $x < strlen($sIn); $x++) { // Use < instead of <= to avoid offset errors
-        $char = substr($sIn, $x, 1);
-        $y = strpos($abto, $char);
-        if ($y === false) { // Use strict comparison
-            $decode .= $char;
-        } else {
-            $decode .= substr($abfrom, $y, 1);
-        }
-    }
-    return $decode;
+  for ($x = 0; $x <= 25; $x++):
+    $abfrom .= chr(65 + $x);
+  endfor;
+  for ($x = 0; $x <= 25; $x++):
+    $abfrom .= chr(97 + $x);
+  endfor;
+  for ($x = 0; $x <= 9; $x++):
+    $abfrom .= $x;
+  endfor;
+  $abto = substr($abfrom, 13, strlen($abfrom) - 13) . substr($abfrom, 0, 13);
+  for ($x = 0; $x <= strlen($sIn); $x++):
+    $y = strpos($abto, substr($sIn, $x, 1));
+    if ($y == "0" || $y == 0):
+      $decode .= substr($sIn, $x, 1);
+    else:
+      $decode .= substr($abfrom, $y, 1);
+    endif;
+  endfor;
+  return $decode;
 }
-
 function getThaiMonth($m)
 {
   $m *= 1;

@@ -1,7 +1,4 @@
-<?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-?>
+
 
 <?php
 require_once "common.inc.php";
@@ -32,13 +29,13 @@ ADOdb_Active_Record::SetDatabaseAdapter($db);
 // status 1 = 'la' , 2 = 'en' , 3 = 'all'
 
 $sql = "SELECT * FROM product_categories m WHERE 1 = 1 AND (m.status = '1' OR  m.status = '3') ORDER BY m.sequence ASC";
+$rs = $db->Execute($sql);
 $itemList = $rs ? $rs->GetAssoc() : [];
-
-$itemListCount = $rs->maxRecordCount();
-
+$itemListCount = $rs ? $rs->maxRecordCount() : 0;
 
 
-if ($_SESSION['session_login'] != NULL) {
+
+if (isset($_SESSION['session_login']) && $_SESSION['session_login'] != NULL) {
 
   //$sql2 = "SELECT * FROM session_orders m WHERE 1 = 1 AND m.session_code =  ? AND (m.invoice_id = '' OR m.invoice_id IS NULL) AND (m.invoice_code = '' OR m.invoice_code IS NULL) ";
 
@@ -88,7 +85,7 @@ if ($_SESSION['session_login'] != NULL) {
     $('#add2Cart').click(function() {
 
       var num = parseInt($('#amount').val()) || 1;
-      var id = '<?php echo isset($this->id) ? $this->id : "" ?>';
+      var id = '<?php echo isset($_GET["id"]) ? htmlspecialchars($_GET["id"]) : "" ?>';
 
       $.get('inc_cart_add.php', {
         id: id,
@@ -202,15 +199,11 @@ if ($_SESSION['session_login'] != NULL) {
 
   });
 </script>
-<?php
-echo "HEADER START";
-exit;
-?>
 
 <header class="header">
   <div class="header-top">
     <div class="brand-logo">
-      <a href="index.php" target="_blank">
+      <a href="index.php">
         <img
           src="/underrenovation/images/Naree_Logo.svg"
           alt="NR NAREE" />
@@ -237,7 +230,7 @@ exit;
             </a>
             <a href="https://www.tiktok.com/@naree.official" target="_blank">
               <img
-                src="/underrenovation/images/tiktok-icon.png" />
+                src="/underrenovation/images/tiktok_icon_3.png" />
             </a>
             <a href="https://wa.me/8562023071333" target="_blank">
               <img
@@ -298,11 +291,6 @@ exit;
         </nav>
       </div>
       <div class="right-fa-bars">
-        <input type="checkbox" id="menu-toggle" class="dropdown-checkbox" />
-        <a href="#" target="_blank">
-          <img
-            src="/underrenovation/images/Register.svg" class="register-icon" />
-        </a>
         <label for="menu-toggle" class="menu-btn">
           <i class="fa fa-bars"></i>
           <i class="fa fa-times"></i>
@@ -316,7 +304,7 @@ exit;
                 ALL PRODUCTS <i class="fa-solid fa-chevron-up"></i>
               </label>
               <div class="dropdown-content">
-                <a href="#">BAGS <span class="arrow">→</span></a>
+                <a href="products_all.php">BAGS <span class="arrow">→</span></a>
                 <a href="#">CLOTHES <span class="arrow">→</span></a>
                 <a href="#">ACCESSORIES <span class="arrow">→</span></a>
               </div>
@@ -329,7 +317,7 @@ exit;
               <li><a href="https://www.tiktok.com/@naree.official">TIKTOK</a></li>
               <li><a href="https://wa.me/8562023071333">WHATSAPP</a></li>
               <li><a href="https://line.me/R/ti/p/nareehandbag">LINE</a></li>
-              <li><a href="#">ADD USER</a></li>
+              <li><a href="register.php">ADD USER</a></li>
 
             </div>
 

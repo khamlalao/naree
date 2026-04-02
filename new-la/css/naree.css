@@ -28,13 +28,13 @@ select {
 }
 
 body {
-    background: #ffffff;
+    background: #f9f2f1fff;
     margin: 0;
     padding: 0;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-size: 14px;
     line-height: 22px;
-    color: #111;
+    color: #6A6A6A;
 }
 
 #wrapper {
@@ -145,7 +145,7 @@ a:hover {
     float: right;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-size: 22px;
-    color: #fff;
+    color: #f9f2f1;
 }
 
 ul.menu_top {
@@ -170,14 +170,14 @@ ul.menu_top li {
 ul.menu_top li a {
     display: block;
     font-size: 16px;
-    color: #fff;
+    color: #f9f2f1;
     padding: 8px 10px 6px 10px;
 }
 
 ul.menu_top li a.txt-hover {
     display: block;
     font-size: 14px;
-    color: #fff;
+    color: #f9f2f1;
     padding: 8px 10px 6px 10px;
 }
 
@@ -207,7 +207,7 @@ ul.menu_top li img {
     border-radius: 100%;
     height: 19px;
     width: 22px;
-    color: #fff;
+    color: #f9f2f1;
     vertical-align: middle;
     padding-top: 1px;
     padding-bottom: 3px;
@@ -231,10 +231,10 @@ ul.menu_top a.selectNav {
 ul.menu_top li a.txt-nohover {
     display: block;
     font-size: 14px;
-    color: #fff;
+    color: #f9f2f1;
     padding: 10px 10px 8px 10px;
     background: #f5f5f5;
-    color: #111;
+    color: #6A6A6A;
     border-radius: 20px
 }
 
@@ -244,14 +244,14 @@ ul.menu_top li a.txt-nohover img {
 
 ul.menu_top li a.txt-select {
     background: #f5f5f5;
-    color: #111;
+    color: #6A6A6A;
     text-align: center;
     cursor: default;
     font-size: 14px
 }
 
 ul.menu_top li a.txt-select:hover {
-    color: #111 !important;
+    color: #6A6A6A !important;
     background: #f5f5f5;
     font-size: 14px
 }
@@ -296,7 +296,7 @@ ul.menu_top li a.txt-select:hover {
 .menu ul li a.selectMn {
     background: #4f4f4f;
     border-radius: 20px;
-    color: #fff
+    color: #f9f2f1
 }
 
 .menu ul li a.selectMn:hover {
@@ -335,7 +335,7 @@ ul.menu_top li a.txt-select:hover {
 }
 
 .footer-left ul li a {
-    color: #fff;
+    color: #f9f2f1;
 }
 
 .footer-left ul li img {
@@ -354,7 +354,7 @@ ul.menu_top li a.txt-select:hover {
     padding: 10px;
     font-family: 'pt_sansboldSVG', 'pt_sansbold';
     font-size: 14px;
-    color: #fff;
+    color: #f9f2f1;
     text-align: center;
     opacity: 0;
     z-index: 100;
@@ -368,7 +368,7 @@ ul.menu_top li a.txt-select:hover {
 .footer-right {
     float: right;
     text-align: right;
-    color: #fff;
+    color: #f9f2f1;
     font-size: 14px;
 }
 
@@ -378,11 +378,11 @@ ul.menu_top li a.txt-select:hover {
 }
 
 .footer-right a {
-    color: #fff;
+    color: #f9f2f1;
 }
 
 .footer-right a:hover {
-    color: #fff;
+    color: #f9f2f1;
     text-decoration: underline
 }
 
@@ -397,7 +397,7 @@ ul.menu_top li a.txt-select:hover {
 .nav {
     margin: 0 0 30px 0;
     text-align: left;
-    color: #000;
+    color: #8C7D77;
     position: relative
 }
 
@@ -406,12 +406,12 @@ ul.menu_top li a.txt-select:hover {
 }
 
 .nav a:hover {
-    color: #000;
+    color: #8C7D77;
     text-decoration: underline
 }
 
 .nav a.home {
-    color: #000;
+    color: #8C7D77;
     font-weight: bold;
 }
 
@@ -458,7 +458,7 @@ ul.menu_top li a.txt-select:hover {
 }
 
 .box-story-caption-L {
-    color: #111;
+    color: #6A6A6A;
     position: absolute;
     left: 0;
     width: 30px;
@@ -469,7 +469,7 @@ ul.menu_top li a.txt-select:hover {
 }
 
 .box-story-caption-R {
-    color: #111;
+    color: #6A6A6A;
     top: 0;
     position: absolute;
     right: 0;
@@ -485,7 +485,7 @@ p.txt-story {
 
 .box-story-year {
 
-    background: #fff;
+    background: #f9f2f1;
 
     padding: 25px;
     float: left;
@@ -529,7 +529,7 @@ p.txt-story {
 
 .box-story-year-l {
 
-    background: #fff;
+    background: #f9f2f1;
 
     padding: 25px;
     float: right;
@@ -553,10 +553,10 @@ p.txt-story {
 }
 
 .product_search input.txt-box {
-    border: 1px solid #666;
+    border: 1px solid #8C7D77;
     padding: 8px;
-    background: #fff;
-    color: #111;
+    background: #f9f2f1;
+    color: #8C7D77;
     font-size: 13px;
     width: 90%;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
@@ -620,7 +620,7 @@ ul.model li {
 }
 
 .box-model:hover {
-    border: 2px solid #111;
+    border: 2px solid#6A6A6A;
 }
 
 .box-model img {
@@ -628,7 +628,7 @@ ul.model li {
 }
 
 .box-model h2 {
-    color: #111;
+    color: #6A6A6A;
     text-align: center;
     font-size: 18px;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
@@ -639,11 +639,11 @@ ul.model li {
 }
 
 .box-model h2 a {
-    color: #111;
+    color: #6A6A6A;
 }
 
 .box-model:hover h2 {
-    color: #000
+    color: #8C7D77
 }
 
 .txt-model-r {
@@ -660,7 +660,7 @@ ul.model li {
 
 .txt-model-r strong,
 .txt-model-l strong {
-    color: #000;
+    color: #8C7D77;
     font-size: 16px;
 }
 
@@ -721,7 +721,7 @@ ul.model-gallery li img {
 }
 
 h2.txt-mdel {
-    color: #111;
+    color: #6A6A6A;
     font-size: 22px;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-weight: normal;
@@ -765,13 +765,13 @@ h3.txt-price span.special {
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-size: 18px;
     margin-top: 30px;
-    border-top: 1px solid #000;
+    border-top: 1px solid #8C7D77;
     padding: 15px 0;
-    border-bottom: 1px solid #000
+    border-bottom: 1px solid #8C7D77
 }
 
 .box-tel a {
-    color: #111;
+    color: #6A6A6A;
 }
 
 
@@ -785,7 +785,7 @@ h3.txt-price span.special {
 }
 
 .normalprice {
-    color: #000;
+    color: #8C7D77;
     text-decoration: line-through
 }
 
@@ -844,7 +844,7 @@ h3.txt-price span.special {
 
 #page ul li a.left:hover {
     left: -4px;
-    color: #000
+    color: #8C7D77
 }
 
 #page ul li.page {
@@ -861,11 +861,11 @@ h3.txt-price span.special {
 }
 
 #page ul li.page a.selectPage {
-    border: 1px solid #111;
+    border: 1px solid#6A6A6A;
 }
 
 #page ul li.page a:hover {
-    border: 1px solid #000
+    border: 1px solid #8C7D77
 }
 
 
@@ -886,16 +886,16 @@ h3.txt-price span.special {
 
 .txtbox-quantity {
     width: 50px;
-    border: 1px solid #000;
+    border: 1px solid #8C7D77;
     padding: 10px 0;
-    color: #111;
+    color: #6A6A6A;
     text-align: center;
     margin: 0;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
 }
 
 .box-quantity a {
-    color: #fff;
+    color: #f9f2f1;
     font-weight: normal;
 }
 
@@ -909,27 +909,27 @@ body.has-active-menu {
     position: fixed;
     height: 100vh;
     width: 320px;
-    background: #fff;
+    background: #f9f2f1;
     padding: 0;
     right: -342px;
-    color: #fff;
+    color: #f9f2f1;
     z-index: 9999;
     top: 0;
-    box-shadow: 1px 1px 1px #555;
+    box-shadow: 1px 1px 1px #6a6a6a;
     overflow: auto;
-    border-left: 2px solid #111
+    border-left: 2px solid #6a6a6a
 }
 
 .box-cart-titlebar {
     position: relative;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-size: 18px;
-    border-bottom: 1px solid #111;
-    padding: 10px 10px
+    border-bottom: 1px solid #8C7D77;
+    padding: 10px 10px;
 }
 
 .box-cart-titlebar h2 {
-    color: #111;
+    color: #8C7D77;
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -958,7 +958,7 @@ body.has-active-menu {
     position: absolute;
     right: 10px;
     background: #ea1d22;
-    color: #fff;
+    color: #f9f2f1;
     text-align: center;
     top: 6px;
     border-radius: 100%;
@@ -980,7 +980,7 @@ body.has-active-menu {
 }
 
 .dim {
-    background: #FFF;
+    background: #F9F2F1;
     opacity: 0.8;
     width: 100%;
     position: fixed;
@@ -1025,7 +1025,7 @@ ul.cart-right li {
     float: left;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-size: 18px;
-    color: #000;
+    color: #8C7D77;
     width: 16px;
     height: 16px;
     text-align: center;
@@ -1033,11 +1033,11 @@ ul.cart-right li {
 }
 
 .delete-item a {
-    color: #000
+    color: #8C7D77
 }
 
 .cart-right-name h2 {
-    color: #111;
+    color: #6A6A6A;
     text-align: center;
     font-size: 10px;
     line-height: 15px;
@@ -1057,13 +1057,13 @@ ul.cart-right li {
     width: 130px;
     float: left;
     margin: 6px 0 0 0;
-    background: #fff;
-    color: #000;
+    background: #f9f2f1;
+    color: #8C7D77;
     text-align: left;
 }
 
 .cart-right-price h3.txt-price {
-    color: #000;
+    color: #8C7D77;
     font-weight: normal;
     text-transform: uppercase;
     margin: 0 0;
@@ -1084,9 +1084,9 @@ ul.cart-right li {
 
 .cart-right-price .txtbox-quantity {
     width: 50px;
-    border: 1px solid #000;
+    border: 1px solid #8C7D77;
     padding: 5px 0;
-    color: #111;
+    color: #6A6A6A;
     text-align: center;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
 }
@@ -1094,11 +1094,11 @@ ul.cart-right li {
 .cart-right-total {
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-size: 14px;
-    color: #000;
-    background: #fff;
+    color: #8C7D77;
+    background: #f9f2f1;
     position: absolute;
     bottom: 0;
-    color: #000;
+    color: #8C7D77;
     padding: 10px 0 0 0;
     border-top: 2px solid #ccc;
     border-bottom: 1px solid #ccc;
@@ -1111,9 +1111,9 @@ ul.cart-right li {
 }
 
 .cart-right-total .check-out {
-    background: #000;
+    background: #8C7D77;
     text-align: center;
-    color: #fff;
+    color: #f9f2f1;
     padding: 10px 0;
     display: blockl;
     float: right;
@@ -1122,7 +1122,7 @@ ul.cart-right li {
 
 .cart-right-total .continue-shop {
     background: #f5f5f5;
-    color: #000;
+    color: #8C7D77;
     text-align: center;
     padding: 10px 0;
     display: blockl;
@@ -1137,16 +1137,16 @@ ul.cart-right li {
     text-align: center;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-size: 16px;
-    color: #000;
+    color: #8C7D77;
 }
 
 a.shop-now {
-    background: #000;
+    background: #8C7D77;
     width: 70%;
     margin: 10px auto;
     display: block;
     padding: 12px 0 10px 0;
-    color: #fff;
+    color: #f9f2f1;
     text-transform: uppercase
 }
 
@@ -1185,7 +1185,7 @@ ul.cart li {
 }
 
 .cart-name h2 {
-    color: #111;
+    color: #6A6A6A;
     text-align: left;
     font-size: 14px;
     line-height: 15px;
@@ -1200,7 +1200,7 @@ ul.cart li {
     float: left;
     margin: 0;
     font-size: 14px;
-    color: #000;
+    color: #8C7D77;
     text-align: right;
     padding: 20px 0 0 0
 }
@@ -1210,7 +1210,7 @@ ul.cart li {
 }
 
 .cart-price h3.txt-price {
-    color: #000;
+    color: #8C7D77;
     font-weight: normal;
     text-transform: uppercase;
     margin: 0;
@@ -1265,7 +1265,7 @@ ul.cart-tbl li ul {
 ul.cart-tbl li ul li {
     margin: 0 0 0 0;
     padding: 6px 10px;
-    border-right: 1px solid #fff;
+    border-right: 1px solid #f9f2f1;
     list-style: none;
     display: block;
     float: left;
@@ -1275,7 +1275,7 @@ ul.cart-tbl li ul li {
 
 ul.cart-tbl li ul li.tdhead {
     background: #555;
-    color: #fff
+    color: #f9f2f1
 }
 
 ul.cart-tbl li ul li.tddetail {
@@ -1318,14 +1318,14 @@ ul.news-list li {
 }
 
 ul.news-list li .box-news {
-    border: 0px solid #fff;
+    border: 0px solid #f9f2f1;
     padding-bottom: 10px;
     width: 96%;
     margin: 0 auto
 }
 
 ul.news-list li .box-news:hover {
-    border: 2px solid #111;
+    border: 2px solid#6A6A6A;
 }
 
 ul.news-list li .box-news img {
@@ -1337,7 +1337,7 @@ ul.news-list li .box-news img {
     position: relative;
     display: block;
     font-weight: bold;
-    color: #111;
+    color: #6A6A6A;
     margin: 0 10px 5px 10px;
     padding: 0
 }
@@ -1354,7 +1354,7 @@ ul.news-list li .box-news img {
     padding: 2px 7px;
     position: absolute;
     right: 0;
-    color: #fff;
+    color: #f9f2f1;
     font-size: 10px;
     top: -3px;
     background: #f00
@@ -1370,6 +1370,11 @@ ul.news-list li .box-news img {
     margin-bottom: 0 !important
 }
 
+.icon-shop .i_mapgoogle {
+    width: 18px !important;
+    padding-left: 5px;
+}
+
 .box-news p.topic-shop {
     font-weight: normal;
     margin: 0 10px;
@@ -1380,7 +1385,7 @@ ul.news-list li .box-news img {
 
 
 .icon-shop a {
-    color: #111;
+    color: #6A6A6A;
     text-decoration: none
 }
 
@@ -1425,7 +1430,7 @@ ul.news-list li .box-news img {
     text-align: left;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-size: 16px;
-    color: #000;
+    color: #8C7D77;
 }
 
 .news-btn ul li img {
@@ -1440,14 +1445,14 @@ ul.news-list li .box-news img {
     position: relative;
     display: block;
     font-weight: bold;
-    color: #111;
+    color: #6A6A6A;
     margin: 0;
     padding: 0
 }
 
 .box-news-detail p.topic-news {
     font-weight: normal;
-    color: #111;
+    color: #6A6A6A;
     margin: 0 0 20px;
     padding: 0
 }
@@ -1624,6 +1629,7 @@ ul.form-all li i {
 ul.form-all li select {
     width: 100%;
     background: #ddd;
+    color: #8c7d77;
     border: none;
     padding: 12px 0;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
@@ -1639,10 +1645,10 @@ ul.form-all li select {
 
 .btn-submit {
     float: left;
-    background: #000;
-    border: 2px solid #000;
+    background: #8C7D77;
+    border: 2px solid #8C7D77;
     padding: 6px 21px;
-    color: #fff;
+    color: #f2e2df;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-size: 14px;
     line-height: 14px;
@@ -1656,7 +1662,7 @@ ul.form-all li select {
     background: #ccc;
     border: 2px solid #ccc;
     padding: 6px 21px;
-    color: #111;
+    color: #8C7D77;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-size: 14px;
     line-height: 14px;
@@ -1667,14 +1673,14 @@ ul.form-all li select {
 
 .btn-login {
     width: 100%;
-    background: #000;
+    background: #8C7D77;
     padding: 14px 0 12px 0;
-    color: #fff;
+    color: #f2e2df;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-size: 16px;
     line-height: 16px;
     text-transform: uppercase;
-    border: 2px solid #000;
+    border: 2px solid #8C7D77;
     margin: 20px auto 5px auto;
     display: block;
     text-align: center
@@ -1684,7 +1690,7 @@ ul.form-all li select {
     width: 100%;
     background: #ccc;
     padding: 14px 0 12px 0;
-    color: #111;
+    color: #6A6A6A;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-size: 16px;
     line-height: 16px;
@@ -1697,15 +1703,15 @@ ul.form-all li select {
 
 .btn-select {
     width: 100%;
-    background: #fff;
+    background: #f9f2f1;
     padding: 14px 0 12px 0;
-    color: #fff;
+    color: #f9f2f1;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-size: 16px;
     line-height: 16px;
-    color: #000;
+    color: #8C7D77;
     text-transform: uppercase;
-    border: 2px solid #000;
+    border: 2px solid #8C7D77;
     margin: 20px auto 5px auto;
     display: block;
     text-align: center
@@ -1721,9 +1727,9 @@ a.btn-facebook:hover,
 .btn-back:hover {
     opacity: 0.9;
     cursor: pointer;
-    border: 2px solid #000;
-    background: #fff;
-    color: #111
+    border: 2px solid #8C7D77;
+    background: #f9f2f1;
+    color: #8C7D77
 }
 
 
@@ -1734,11 +1740,11 @@ a.btn-facebook:hover,
 }
 
 a.bth-cart {
-    background: #000;
+    background: #8C7D77;
     display: block;
     float: left;
     padding: 12px 25px 10px 25px;
-    color: #fff;
+    color: #f9f2f1;
     box-shadow: 0 0 3px #ccc;
     margin: 0 10px
 }
@@ -1758,12 +1764,12 @@ a.bth-cart:hover {
 
 
 a.bth-wishlist {
-    background: #fff;
-    border: 2px solid #000;
+    background: #f9f2f1;
+    border: 2px solid #8C7D77;
     display: block;
     float: left;
     padding: 10px 28px 8px 23px;
-    color: #111;
+    color: #8C7D77;
     box-shadow: 0 0 2px #ccc
 }
 
@@ -1783,7 +1789,7 @@ a.bth-wishlist:hover {
 
 a.btn-facebook {
     background: #264587;
-    color: #fff;
+    color: #f9f2f1;
     border: 2px solid #264587;
     padding: 9px 0;
     display: block;
@@ -1793,7 +1799,7 @@ a.btn-facebook {
 
 a.btn-facebook i {
     margin-right: 10px;
-    border: 1px solid #fff;
+    border: 1px solid #f9f2f1;
     padding: 4px 10px;
     border-radius: 3px;
 }
@@ -1802,7 +1808,10 @@ a.btn-facebook i {
 
 
 
-
+table img {
+    width: 100%;
+    height: auto;
+}
 
 ul.map {
     margin: 40px 0;
@@ -1819,7 +1828,7 @@ ul.map li {
 }
 
 ul.map li .box-map {
-    border: 4px solid #111;
+    border: 4px solid#8C7D77;
     width: 94%;
     margin: 0 auto;
     padding: 50px 0;
@@ -1913,7 +1922,7 @@ ul.map li:hover .box-map {
 }
 
 .box-or-txt {
-    background: #fff;
+    background: #f9f2f1;
     width: 50px;
     height: 20px;
     margin: 0 auto -10px auto;
@@ -1977,19 +1986,19 @@ ul.mn-account li a {
     background: #ddd;
     border-radius: 20px;
     margin-bottom: 5px;
-    color: #111
+    color: #6A6A6A
 }
 
 ul.mn-account a:hover {
     background: #eee;
     border-radius: 20px;
-    color: #111
+    color: #6A6A6A
 }
 
 ul.mn-account a.selectAcc {
     background: #4f4f4f;
     border-radius: 20px;
-    color: #fff
+    color: #f9f2f1
 }
 
 ul.mn-account a.selectAcc:hover {
@@ -2039,8 +2048,8 @@ a.box-add-address {
 }
 
 a.box-add-address:hover {
-    border: 2px solid #111;
-    color: #111
+    border: 2px solid#6A6A6A;
+    color: #6A6A6A
 }
 
 .box-edit-address {
@@ -2070,8 +2079,8 @@ ul.box-order-tbl li ul li {
     margin: 0 0 0 0;
     padding: 10px 0;
     letter-spacing: normal;
-    border-right: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    border-right: 1px solid #f9f2f1;
+    border-bottom: 1px solid #f9f2f1;
     list-style: none;
     display: block;
     float: left;
@@ -2082,7 +2091,7 @@ ul.box-order-tbl li ul li {
 
 ul.box-order-tbl li ul li.tdhead {
     background: #555;
-    color: #fff
+    color: #f9f2f1
 }
 
 
@@ -2109,7 +2118,7 @@ ul.box-order-tbl li ul li.tdhead {
     display: table-cell;
     border-radius: 100%;
     margin: 0 10px 0 0;
-    color: #fff
+    color: #f9f2f1
 }
 
 .step-shop td {
@@ -2118,12 +2127,12 @@ ul.box-order-tbl li ul li.tdhead {
 }
 
 .step-shop td.disable td {
-    color: #111 !important
+    color: #6A6A6A !important
 }
 
 .step-shop td.disable .num-step {
-    background: #111;
-    color: #fff
+    background: #6A6A6A;
+    color: #f9f2f1
 }
 
 
@@ -2138,7 +2147,7 @@ ul.box-order-tbl li ul li.tdhead {
 
 .box-summary {
     border: 3px solid #555;
-    background: #fff;
+    background: #f9f2f1;
     box-shadow: 0 0 2px #ccc;
     text-align: left;
     padding: 20px;
@@ -2187,7 +2196,7 @@ ul.step-how li {
     float: left;
     text-align: center;
     background: #ddd;
-    color: #fff;
+    color: #f9f2f1;
     border-radius: 100%;
     font-family: 'pt_sansregularSVG', 'pt_sansregular';
     font-size: 16px;
@@ -2196,8 +2205,8 @@ ul.step-how li {
 }
 
 ul.step-how li.active {
-    background: #111;
-    color: #fff;
+    background: #6A6A6A;
+    color: #f9f2f1;
 }
 
 .line_step {
@@ -2234,7 +2243,7 @@ h1.txt-step {
     width: 30px;
     height: 30px;
     background: #f00;
-    color: #fff;
+    color: #f9f2f1;
     text-align: center;
     vertical-align: middle;
     display: table-cell;
@@ -2247,7 +2256,7 @@ h1.txt-step {
 
 .box-img-step img {
     width: 100%;
-    border: 4px solid #000;
+    border: 4px solid #8C7D77;
     margin-bottom: 20px;
     margin-top: 20px;
 }
@@ -2284,15 +2293,15 @@ ul.shop-list li {
 ul.shop-list li a {
     margin: 0;
     padding: 8px 0;
-    color: #111;
+    color: #6A6A6A;
     display: block;
     width: 100%;
     text-align: left;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #f9f2f1;
 }
 
 ul.shop-list li a:hover {
-    border-bottom: 1px solid #111;
+    border-bottom: 1px solid#6A6A6A;
 }
 
 ul.news-list li.shop-list-w {
@@ -2312,13 +2321,13 @@ ul.news-list li.shop-list-w .box-news p {
 
 
 ul.news-list li.shop-list-w .box-news {
-    border: 0px solid #fff;
+    border: 0px solid #f9f2f1;
     width: 90%;
     margin: 0 auto
 }
 
 ul.news-list li.shop-list-w .box-news:hover {
-    border: 0px solid #fff;
+    border: 0px solid #f9f2f1;
 }
 
 
@@ -2326,7 +2335,7 @@ ul.news-list li.shop-list-w .box-news:hover {
 a.google {
     border-radius: 20px;
     background: #ddd;
-    color: #000;
+    color: #8C7D77;
     padding: 6px 0;
     text-align: center;
     width: 100%;
@@ -2335,8 +2344,8 @@ a.google {
 }
 
 a.google:hover {
-    background: #000;
-    color: #fff
+    background: #8C7D77;
+    color: #f9f2f1
 }
 
 
@@ -2359,7 +2368,7 @@ a.google:hover {
     margin: 0;
     padding: 0;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
-    color: #fff;
+    color: #f9f2f1;
     font-size: 28px;
     line-height: 32px;
     font-weight: normal;
@@ -2471,8 +2480,8 @@ ul.promotion-all li .box-cation-promo {
     font-weight: normal;
     font-size: 38px;
     line-height: 43px;
-    color: #fff;
-    margin: 30% auto 0 auto;
+    color: #f9f2f1;
+    margin: 26% auto 0 auto;
     width: 70%;
     border: 1px solid #d7d7d7;
     padding: 25px 0 20px 0;
@@ -2493,16 +2502,16 @@ ul.promotion-all li:last-child .box-cation-promo {
 html,
 
 :root {
-    --bg-pink: #f6ebe8;
-    --dark-grey: #6a6a6a;
-    --nav-grey: #8d8583;
-    --text-white: #ffffff;
+    --bg-pink: #f9f2f1;
+    --dark-grey: #8c7d77;
+    --nav-grey: #8c7d77;
+    --text-white: #f9f2f1fff;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #f9f2f1;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     background-color: var(--bg-pink);
     color: var(--dark-grey);
@@ -2523,6 +2532,10 @@ body {
     /* This tells the main section to grow and take up all available space */
 }
 
+.brand-logo {
+    margin-bottom: 15px
+}
+
 .hero-image {
     width: 100%;
     height: 100%;
@@ -2536,7 +2549,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 9999;
-    background-color: #f3d6cc;
+    background-color: #f2e2df;
     box-sizing: border-box;
 }
 
@@ -2630,7 +2643,7 @@ body {
 }
 
 .dropbtn {
-    background-color: #8d8583;
+    background-color: #8c7d77;
     color: white;
     padding: 5px 15px;
     font-size: 16px;
@@ -2659,7 +2672,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #fff;
     min-width: stretch;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
     z-index: 9999;
@@ -2669,7 +2682,7 @@ body {
 }
 
 .dropdown-content a {
-    color: #6a6a6a;
+    color: #8C7D77;
     padding: 8px 20px !important;
     text-decoration: none;
     display: flex;
@@ -2748,7 +2761,7 @@ body {
 
 .pill-btn {
     text-decoration: none;
-    color: #6a6a6a;
+    color: #8c7d77;
     font-size: 16px;
     padding: 5px 15px;
     border-radius: 20px;
@@ -2790,12 +2803,16 @@ body {
     position: relative;
     font-size: 70px;
     line-height: 1 !important;
-    color: #7a7a7a;
+    color: #8c7d77;
     z-index: 2;
 }
 
 .new-text {
-    color: #d0b4ac !important;
+    color: #D8AD9D !important;
+}
+
+.butterfly-bg {
+    padding-top: 30px;
 }
 
 
@@ -2810,7 +2827,7 @@ body {
 }
 
 .footer {
-    background-color: #f3d6cc !important;
+    background-color: #f2e2df !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2849,6 +2866,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
+
 }
 
 .footer-section-3 {

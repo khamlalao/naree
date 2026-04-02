@@ -1,7 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
 <link rel="stylesheet" type="text/css" href="css/naree.css">
-<link rel="stylesheet" type="text/css" href="../css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
 <link rel="stylesheet" type="text/css" href="font-face/stylesheet.css">
 <link rel="stylesheet" type="text/css" href="css/dropdown.css">
 <script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>

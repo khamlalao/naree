@@ -94,7 +94,7 @@
 
                       <tr>
 
-                        <td width="8%"><img src="images/icon/i_tel.png"  alt="" width="28" height="28"/></td>
+                        <td width="8%"><img src="images/icon/i_tel_2.png"  alt="" width="28" height="28"/></td>
 
                         <td width="92%"><span class="topic-news"><span class="numberEN"><?php echo $val['phone']?></span></span></td>
 
@@ -103,7 +103,7 @@
                        <?php if($val['mobile'] != null){?>
                       <tr>
 
-                        <td><img src="images/icon/i_mobile.png"  alt="" width="28" height="28"/></td>
+                        <td><img src="images/icon/i_mobile_2.png"  alt="" width="28" height="28"/></td>
 
                         <td><span class="topic-news"><span class="numberEN"><?php echo $val['mobile']?></span></span></td>
 
@@ -111,7 +111,7 @@
                       <?php } ?>
                       <?php if($val['whatsapp'] != null){?>
                       <tr>
-                        <td><img src="images/icon/i_whatsapp.png" width="28" height="28" alt=""/></td>
+                        <td><img src="images/icon/i_whatsapp.svg" width="28" height="28" alt=""/></td>
 
                         <td><span class="topic-news"><span class="numberEN"><?php echo $val['whatsapp']?></span></span></td>
 
@@ -119,25 +119,25 @@
                       <?php } ?>
                       <?php if($val['instagram'] != null){?>
                        <tr>
-                        <td><img src="images/icon/i_instagram.png" width="28" height="28" alt=""/></td>
+                        <td><img src="images/icon/i_instagram_2.png" width="28" height="28" alt=""/></td>
                         <td><span class="topic-news"><?php echo $val['instagram']?></span></td>
                       </tr>
                       <?php } ?>
                       <?php if($val['facebook'] != null){?>
                       <tr>
-                        <td><img src="images/icon/i_facebook_s.png" width="28" height="28" alt=""/></td>
+                        <td><img src="images/icon/i_facebook_2.png" width="28" height="28" alt=""/></td>
                         <td><span class="topic-news"><?php echo $val['facebook']?></span></td>
                       </tr>
                       <?php } ?>
                       <?php if($val['line_id'] != null){?>
                       <tr>
-                        <td><img src="images/icon/i_line_s.png" width="28" height="28" alt=""/></td>
+                        <td><img src="images/icon/i_line_2.png" width="28" height="28" alt=""/></td>
                         <td><span class="topic-news"><?php echo $val['line_id']?></span></td>
                       </tr>
                       <?php } ?>
                       <?php if($val['gmap'] != null){?>
                       <tr>
-                        <td><img src="images/icon/i_pin.png" width="28" height="28" alt=""/></td>
+                        <td><img src="images/icon/i_pin_2.png" width="18" height="28" alt="" class="i_mapgoogle"/></td>
                         <td><a href="<?php echo $val['gmap']?>" target="_blank">Google map</a></td>
                       </tr>
                       <?php } ?>

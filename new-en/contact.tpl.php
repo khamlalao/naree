@@ -230,7 +230,7 @@ function SetAction(url) {
 
     <tr>
 
-      <td width="4%"><img src="images/icon/i_tel.png"  alt=""/></td>
+      <td width="4%"><img src="images/icon/i_tel_2.png"  alt=""/></td>
 
       <td width="96%"><a href="tel:+856212616133">+856 21-261 613</a></td>
 
@@ -238,7 +238,7 @@ function SetAction(url) {
 
     <tr>
 
-      <td><img src="images/icon/i_mobile.png"  alt=""/></td>
+      <td><img src="images/icon/i_mobile_2.png"  alt=""/></td>
 
       <td>+856 20-5930 9333</td>
 
@@ -246,7 +246,7 @@ function SetAction(url) {
 
      <tr>
 
-       <td><img src="images/icon/i_mobile.png" width="28" height="28" alt=""/></td>
+       <td><img src="images/icon/i_mobile_2.png" width="28" height="28" alt=""/></td>
 
        <td>+856 20-2307 1333</td>
 
@@ -254,7 +254,7 @@ function SetAction(url) {
 
      <tr>
 
-      <td><img src="images/icon/i_mail.png" width="28" height="28" alt=""/></td>
+      <td><img src="images/icon/i_mail_2.png" width="28" height="28" alt=""/></td>
 
       <td><a href="mailto:naree.laos@gmail.com">naree.laos@gmail.com</a></td>
 
@@ -262,7 +262,7 @@ function SetAction(url) {
 
     <tr>
 
-      <td><img src="images/icon/i_instagram.png" width="28" height="28" alt=""/> </td>
+      <td><img src="images/icon/i_instagram_2.png" width="28" height="28" alt=""/> </td>
 
       <td>nareehandbags</td>
 
@@ -270,7 +270,7 @@ function SetAction(url) {
 
     <tr>
 
-      <td><img src="images/icon/i_line_s.png" width="28" height="28" alt=""/></td>
+      <td><img src="images/icon/i_line_2.png" width="28" height="28" alt=""/></td>
 
       <td>nareehandbags</td>
 
@@ -278,7 +278,7 @@ function SetAction(url) {
 
   <tr>
 
-      <td><img src="images/icon/i_facebook_s.png" width="28" height="28" alt=""/></td>
+      <td><img src="images/icon/i_facebook_2.png" width="28" height="28" alt=""/></td>
 
       <td>Naree Hangbags</td>
 
@@ -305,14 +305,14 @@ function SetAction(url) {
 
     	<div class="box-map">
 
-    	<img src="images/icon/i_mapgraphic.png"   alt=""/>
+    	<img src="images/icon/i_mapghrapic_2.png"   alt=""/>
 
         <p>GHAPHIC MAP</p>
 
     </div></a></li>
      <li><a href="https://goo.gl/maps/5XUCSZBLNer" target="_blank"><div class="box-map">
 
-    <img src="images/icon/i_map_google.png"   alt=""/>
+    <img src="images/icon/i_map_google_2.png"   alt=""/>
 
         <p>GOOGLE MAP</p>
 
@@ -320,7 +320,7 @@ function SetAction(url) {
 
     <li><a href="shop.php"><div class="box-map">
 
-    <img src="images/icon/i_map_pin.png"    alt=""/>
+    <img src="images/icon/i_map_pin_2.png" alt=""/>
 
         <p>SHOPS</p>
 
