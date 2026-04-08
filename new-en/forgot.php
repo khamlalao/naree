@@ -16,6 +16,7 @@
 
 <body>
 
+<?php include('inc_cart_left.php')?>
 
 <div id="wrapper"> 
 

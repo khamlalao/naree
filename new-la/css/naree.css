@@ -28,13 +28,13 @@ select {
 }
 
 body {
-    background: #f9f2f1fff;
+    background: #f9f2f1;
     margin: 0;
     padding: 0;
     font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
     font-size: 14px;
     line-height: 22px;
-    color: #6A6A6A;
+    color: #8c7d77;
 }
 
 #wrapper {
@@ -286,7 +286,7 @@ ul.menu_top li a.txt-select:hover {
 .menu ul li a {
     display: block;
     padding: 8px 20px 6px 20px;
-    color: #a3a3a3
+    color: #8c7d77 !important
 }
 
 .menu ul li a:hover {
@@ -421,7 +421,7 @@ ul.menu_top li a.txt-select:hover {
 }
 
 .nav span {
-    color: #7d7d7d;
+    color: #8C7D77;
     text-decoration: underline
 }
 
@@ -549,7 +549,7 @@ p.txt-story {
     right: 0;
     top: -8px;
     width: 25%;
-    z-index: 1000
+    z-index: 20
 }
 
 .product_search input.txt-box {
@@ -564,8 +564,8 @@ p.txt-story {
 
 .product_search input.txt-btn {
     position: absolute;
-    top: -2px;
-    right: 10px
+    top: 9px;
+    right: 24px;
 }
 
 .contentHolder {
@@ -1014,7 +1014,7 @@ ul.cart-right li {
 .cart-right-img {
     width: 110px;
     float: left;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 .cart-right-img img {
@@ -1037,7 +1037,7 @@ ul.cart-right li {
 }
 
 .cart-right-name h2 {
-    color: #6A6A6A;
+    color: #8C7D77;
     text-align: center;
     font-size: 10px;
     line-height: 15px;
@@ -2131,7 +2131,7 @@ ul.box-order-tbl li ul li.tdhead {
 }
 
 .step-shop td.disable .num-step {
-    background: #6A6A6A;
+    background: #8C7D77;
     color: #f9f2f1
 }
 
@@ -2481,7 +2481,7 @@ ul.promotion-all li .box-cation-promo {
     font-size: 38px;
     line-height: 43px;
     color: #f9f2f1;
-    margin: 26% auto 0 auto;
+    margin: 30% auto 0 auto;
     width: 70%;
     border: 1px solid #d7d7d7;
     padding: 25px 0 20px 0;
@@ -2493,7 +2493,7 @@ ul.promotion-all li:hover .box-cation-promo-app {
 }
 
 ul.promotion-all li:last-child .box-cation-promo {
-    margin: 26% auto 0 auto;
+    margin: 26% auto 0 auto !important;
     width: 50%;
 }
 
@@ -2564,7 +2564,7 @@ body {
 .header-right-group {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     /* Space between icons and hamburger */
 }
 
@@ -2573,7 +2573,7 @@ body {
     gap: 15px;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
 .top-icons a {
@@ -2612,6 +2612,7 @@ body {
     cursor: pointer;
     display: none;
     margin-left: auto;
+    z-index: 900 !important;
 }
 
 /* hide X icon by default */
@@ -2623,6 +2624,7 @@ body {
 .menu {
     max-height: 0;
     overflow: hidden;
+    z-index: 900 !important;
     transition: 0.3s;
 }
 
@@ -2751,6 +2753,7 @@ body {
 }
 
 .nav-links {
+    margin: 0;
     display: flex;
     list-style: none;
     align-items: center;
@@ -2770,12 +2773,12 @@ body {
 }
 
 .pill-btn:hover {
-    background-color: #8d8583;
+    background-color: #8c7d77;
     color: white;
 }
 
 .pill-btn.active {
-    background-color: #8d8583;
+    background-color: #8c7d77;
     color: white;
     cursor: default;
 }

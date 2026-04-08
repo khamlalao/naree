@@ -229,7 +229,7 @@ jQuery(document).ready(function($) {
 
   <div class="box-cart-titlebar">
 
-    <div class="icon-close" id="close-cart" title="Close"><img src="images/icon/i_close.png"   alt=""/></div>
+    <div class="icon-close" id="close-cart" title="Close"><img src="images/icon/i_close_3.png"   alt=""/></div>
 
     <h2>ກະຕ່າສິນຄ້າຂອງຂ້ອຍ</h2>
 
@@ -283,11 +283,11 @@ jQuery(document).ready(function($) {
 
                 <tr>
 
-                  <td width="20" align="center" bgcolor="#000000"><a href="javascript:void(0);" title="Minus" onClick="return addcart('del','<?php echo $data['id']?>');" style="color:#fff"><i class="fa fa-minus" aria-hidden="true"></i></a></td>
+                  <td width="20" align="center" bgcolor="#8c7d77"><a href="javascript:void(0);" title="Minus" onClick="return addcart('del','<?php echo $data['id']?>');" style="color:#fff"><i class="fa fa-minus" aria-hidden="true"></i></a></td>
 
                   <td><input type="text" value="<?php echo $data['amount']?>" name="amount<?php echo $data['id']?>" id="amount<?php echo $data['id']?>" class="txtbox-quantity"></td>
 
-                  <td width="20" align="center"  bgcolor="#000000"><a href="javascript:void(0);" title="Add" onClick="return addcart('add','<?php echo $data['id']?>');" style="color:#fff"><i class="fa fa-plus" aria-hidden="true"></i>
+                  <td width="20" align="center"  bgcolor="#8c7d77"><a href="javascript:void(0);" title="Add" onClick="return addcart('add','<?php echo $data['id']?>');" style="color:#fff"><i class="fa fa-plus" aria-hidden="true"></i>
 
 </a></td>
 

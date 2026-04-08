@@ -12,13 +12,7 @@ require_once DIR."library/extension/lang.php";
 require_once DIR."library/config/rewrite.php";
 require_once DIR."library/Savant3.php";
 ?>
-<?php
-if (empty($_SESSION['session_login'])) {
-    $itemOrder = [];
-    $gettmp["recordCount"] = 0;
-    $gettmp['total_amount'] = 0;
-    $gettmp['totalPay'] = 0;
-} ?>
+
 <?php 
 
 global $db;
@@ -36,8 +30,8 @@ $gettmp["recordCount"] = $rs->maxRecordCount();
 $sql = "SELECT sum(m.amount) as total_amount FROM session_orders m WHERE 1 = 1 AND m.session_code =  ? AND (m.invoice_id = '' OR m.invoice_id IS NULL) AND (m.invoice_code = '' OR m.invoice_code IS NULL) ";
 $stmt = $db->Prepare($sql);
 $rs = $db->Execute($stmt,array($_SESSION['session_login']));
-$itemCountOrder = $rs ? $rs->GetAssoc() : [];
-$gettmp['total_amount'] = $rs ? $rs->fields['total_amount'] : 0;
+$itemCountOrder = $rs->GetAssoc();
+$gettmp['total_amount'] = $rs->fields['total_amount'];
 
 
 
@@ -235,7 +229,7 @@ jQuery(document).ready(function($) {
 
   <div class="box-cart-titlebar">
 
-    <div class="icon-close" id="close-cart" title="Close"><img src="images/icon/i_close.png"   alt=""/></div>
+    <div class="icon-close" id="close-cart" title="Close"><img src="images/icon/i_close_3.png"   alt=""/></div>
 
     <h2>My Shopping Bag</h2>
 
@@ -291,11 +285,11 @@ jQuery(document).ready(function($) {
 
                 <tr>
 
-                  <td width="20" align="center" bgcolor="#000000"><a href="javascript:void(0);" title="Minus" onClick="return addcart('del','<?php echo $data['id']?>');" style="color:#fff"><i class="fa fa-minus" aria-hidden="true"></i></a></td>
+                  <td width="20" align="center" bgcolor="#8c7d77"><a href="javascript:void(0);" title="Minus" onClick="return addcart('del','<?php echo $data['id']?>');" style="color:#fff"><i class="fa fa-minus" aria-hidden="true"></i></a></td>
 
                   <td><input type="text" value="<?php echo $data['amount']?>" name="amount<?php echo $data['id']?>" id="amount<?php echo $data['id']?>" class="txtbox-quantity"></td>
 
-                  <td width="20" align="center"  bgcolor="#000000"><a href="javascript:void(0);" title="Add" onClick="return addcart('add','<?php echo $data['id']?>');" style="color:#fff"><i class="fa fa-plus" aria-hidden="true"></i>
+                  <td width="20" align="center"  bgcolor="#8c7d77"><a href="javascript:void(0);" title="Add" onClick="return addcart('add','<?php echo $data['id']?>');" style="color:#fff"><i class="fa fa-plus" aria-hidden="true"></i>
 
 </a></td>
 

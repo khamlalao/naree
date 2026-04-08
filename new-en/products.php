@@ -14,8 +14,8 @@ require_once DIR."library/Savant3.php";
 
 function paginate_three($reload, $page, $tpages, $adjacents) {
 	
-	$prevlabel = "<img src=\"images/icon/arrow_left.png\" />";
-	$nextlabel = "<img src=\"images/icon/arrow_right.png\"   />";
+	$prevlabel = "<img src=\"images/icon/arrow_left_2.png\" />";
+	$nextlabel = "<img src=\"images/icon/arrow_right_2.png\"   />";
 	
 //	$out = "";
 	

@@ -607,7 +607,7 @@ Your Shopping Bag is Empty
             <img
               src="/underrenovation/images/user_add_icons.svg" />
           </a>
-          <div class="mn-mobile-cart" ;>
+          <div class="mn-desktop-cart" ;>
             <a href="#nogo" id="mycart">
 
               <img src="/underrenovation/images/register.svg" class="cart-icon" alt="Cart" />
@@ -654,10 +654,19 @@ Your Shopping Bag is Empty
       </div>
       <div class="right-fa-bars">
         <input type="checkbox" id="menu-toggle" class="dropdown-checkbox" />
-        <a href="#" target="_blank">
-          <img
-            src="/underrenovation/images/Register.svg" class="register-icon" />
-        </a>
+        <div class="mn-mobile-cart"><a href="#nogo" id="mycart">
+            <?php if ($gettmp['total_amount'] != 0) { ?>
+              <div class="yourcart-num num-items">
+                <?php echo $gettmp['total_amount'] ?>
+              </div>
+            <?php } ?>
+           
+
+            <!-- // Amount No of Order -->
+            <img src="/underrenovation/images/register.svg" class="cart-icon" alt="Cart" />
+            <span id="yourcart-num" class="num-items"></span></a></div>
+            
+          </a></div>
         <label for="menu-toggle" class="menu-btn">
           <i class="fa fa-bars"></i>
           <i class="fa fa-times"></i>
@@ -1000,7 +1009,7 @@ Your Shopping Bag is Empty
 
   <tr>
 
-    <td><img src="images/icon/arrow_left.png"  alt=""/> </td>
+    <td><img src="images/icon/arrow_left_2.png"  alt=""/> </td>
 
     <td>&nbsp;</td>
 
@@ -1196,7 +1205,7 @@ Your Shopping Bag is Empty
 <!--<a href="javascript:void(0);" class="bth-cart" id="add2Cart" onClick="return addtocart('cart');"> -->
 <a href="javascript:void(0);" class="bth-cart" id="add2Cart"><img src="images/icon/i_cart.png" alt=""/> Add to Cart </a>
 
-<a href="member_wishlist.php?id=<?php echo $this->item->id?>" class="bth-wishlist "><img src="images/icon/i_wishlist.png" alt=""/>Wishlist</a>
+<a href="member_wishlist.php?id=<?php echo $this->item->id?>" class="bth-wishlist "><img src="images/icon/i_wishlist_2.png" alt=""/>Wishlist</a>
 
 <div class="clear"></div>
 
@@ -1277,4 +1286,3 @@ Your Shopping Bag is Empty
 </body>
 
 </html>
-

@@ -10,31 +10,23 @@
 
 
 
-<meta http-equiv="content-type" charset="utf-8">
+  <meta http-equiv="content-type" charset="utf-8">
 
 
 
-<title>ລົງທະບຽນ | NAREE : Blending traditional craftsmanship with modern style</title>
+  <title>ລົງທະບຽນ | NAREE : Blending traditional craftsmanship with modern style</title>
 
 
 
-<meta name="title" content="Register |  NAREE : Blending traditional craftsmanship with modern style">
+  <meta name="title" content="Register |  NAREE : Blending traditional craftsmanship with modern style">
 
 
 
-<meta name="keywords" content="shopping, Silk Bags,LEATHER BAGS,Cotton Bags,Bags,Laos brand, handbags, Lao PDR,goddess,woman,modern women,Register">
+  <meta name="keywords" content="shopping, Silk Bags,LEATHER BAGS,Cotton Bags,Bags,Laos brand, handbags, Lao PDR,goddess,woman,modern women,Register">
 
 
 
-<meta name="description" content="Register on website naree.co">
-
-
-
-
-
-
-
-<?php include('inc_css.php');?>
+  <meta name="description" content="Register on website naree.co">
 
 
 
@@ -42,7 +34,15 @@
 
 
 
- <link rel="stylesheet" href="js/datepicker/jquery-ui.css">
+  <?php include('inc_css.php'); ?>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="js/datepicker/jquery-ui.css">
 
 
 
@@ -66,7 +66,8 @@
 
 
 
-   <script>
+  <script>
+    $(function() {
 
 
 
@@ -74,7 +75,7 @@
 
 
 
-  $(function() {
+      $("#datepicker").datepicker({
 
 
 
@@ -82,7 +83,7 @@
 
 
 
-    $( "#datepicker" ).datepicker({
+        changeMonth: true,
 
 
 
@@ -90,7 +91,7 @@
 
 
 
-      changeMonth: true,
+        changeYear: true
 
 
 
@@ -98,7 +99,7 @@
 
 
 
-      changeYear: true
+      });
 
 
 
@@ -107,21 +108,6 @@
 
 
     });
-
-
-
-
-
-
-
-  });
-
-
-
-
-
-
-
   </script>
 
 
@@ -130,27 +116,24 @@
 
 
 
-<script language="javascript">
+  <script language="javascript">
+    function chkEmail(email) {
 
 
 
-function chkEmail(email){
+      //alert("CHECK"+email);
 
 
 
-	//alert("CHECK"+email);
+      $.get('ajax_check_username.php', {
 
 
 
-	$.get('ajax_check_username.php', {
+        email: email,
 
 
 
-       email : email,
-
-
-
-	    time : new Date().getTime()
+        time: new Date().getTime()
 
 
 
@@ -158,7 +141,7 @@ function chkEmail(email){
 
 
 
-		//  alert(data);
+        //  alert(data);
 
 
 
@@ -170,11 +153,11 @@ function chkEmail(email){
 
 
 
-		  document.getElementById('password').disabled = false;
+          document.getElementById('password').disabled = false;
 
 
 
-		  document.getElementById('re_password').disabled = false;
+          document.getElementById('re_password').disabled = false;
 
 
 
@@ -186,11 +169,11 @@ function chkEmail(email){
 
 
 
-		  document.getElementById('password').disabled = true;
+          document.getElementById('password').disabled = true;
 
 
 
-		  document.getElementById('re_password').disabled = true;
+          document.getElementById('re_password').disabled = true;
 
 
 
@@ -198,11 +181,11 @@ function chkEmail(email){
 
 
 
-    });
+      });
 
 
 
-}
+    }
 
 
 
@@ -210,7 +193,7 @@ function chkEmail(email){
 
 
 
-function fncKeyPassword(_val,num){
+    function fncKeyPassword(_val, num) {
 
 
 
@@ -218,7 +201,7 @@ function fncKeyPassword(_val,num){
 
 
 
-// document.getElementById("sp_text").innerHTML = _val.length+"/4";
+      // document.getElementById("sp_text").innerHTML = _val.length+"/4";
 
 
 
@@ -226,7 +209,7 @@ function fncKeyPassword(_val,num){
 
 
 
-	var key = _val.length;
+      var key = _val.length;
 
 
 
@@ -234,7 +217,7 @@ function fncKeyPassword(_val,num){
 
 
 
-	var elem = document.getElementById('password').value;
+      var elem = document.getElementById('password').value;
 
 
 
@@ -242,7 +225,6 @@ function fncKeyPassword(_val,num){
 
 
 
-	
 
 
 
@@ -250,383 +232,56 @@ function fncKeyPassword(_val,num){
 
 
 
-	if(key < num){ 
 
+      if (key < num) {
 
 
 
 
 
 
-		  alert("Password use 6 character"); 
 
+        alert("Password use 6 character");
 
 
 
 
 
 
-	}
 
+      }
 
 
 
 
 
 
-	if(!elem.match(/^([a-z0-9\_])+$/i)){
 
+      if (!elem.match(/^([a-z0-9\_])+$/i)) {
 
 
 
 
 
 
-	alert("รหัสผ่านใช้ 5 ถึง 20 ตัวอักษร เฉพาะอักษรภาษาอังกฤษและ/หรือตัวเลขร่วมกันได้ ");
 
+        alert("รหัสผ่านใช้ 5 ถึง 20 ตัวอักษร เฉพาะอักษรภาษาอังกฤษและ/หรือตัวเลขร่วมกันได้ ");
 
 
 
 
 
 
-	document.getElementById('password').focus();
 
+        document.getElementById('password').focus();
 
 
 
 
 
 
-	}
 
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-function fncKeyRePassword(pass){
-
-
-
-
-
-
-
-   with(document.form1){
-
-
-
-
-
-
-
-	if (document.getElementById('re_password').length == document.getElementById('password').length) {
-
-
-
-
-
-
-
-	  if (document.getElementById('re_password').value == document.getElementById('password').value) {	
-
-
-
-
-
-
-
-     // alert(' การยืนยันรหัสผ่านไม่ถูกต้อง :');
-
-
-
-
-
-
-
-//	  		document.getElementById("sp_text").innerHTML = "True";
-
-
-
-
-
-
-
-          $('#sp_text').html('<img src="images/icon/true.gif" width="30" height="30">');
-
-
-
-		//  document.getElementById('password').disabled = false;
-
-
-
-		//  document.getElementById('re_password').disabled = false;
-
-
-
-
-
-
-
-   //   document.getElementById('re_password').focus();
-
-
-
-
-
-
-
-   //   return false;
-
-
-
-
-
-
-
-    }else{
-
-
-
-		
-
-
-
-        $('#sp_text').html('<img src="images/icon/false.gif" width="30" height="30">');
-
-
-
-
-
-
-
-	//	document.getElementById("sp_text").innerHTML = "False";
-
-
-
-
-
-
-
-	    document.getElementById('re_password').value == '';
-
-
-
-
-
-
-
-		document.getElementById('re_password').focus();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-
-
-
-
-
-
-	}
-
-
-
-
-
-
-
-	}else{ 		
-
-
-
-
-
-
-
-		document.getElementById("sp_text").innerHTML = "False"; 
-
-
-
-
-
-
-
-	    document.getElementById('re_password').value == '';
-
-
-
-
-
-
-
-		document.getElementById('re_password').focus();	
-
-
-
-
-
-
-
-	}
-
-
-
-
-
-
-
-   }
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-</script>
-
-
-
-
-
-
-
-<!-- BEGIN Form. -->
-
-
-
-
-
-
-
-<script language="javascript" type="text/javascript">
-
-
-
-
-
-
-
-function checkForm(){
-
-
-
-
-
-
-
-  with(document.form1){
-
-
-
-
-
-
-
-    // Check
-
-
-
-
-
-
-
-	if (document.getElementById('name').value == '') {	
-
-
-
-
-
-
-
-      alert(' ກະລຸນາປ້ອນຊື່-ນາມສະກຸນ: :');
-
-
-
-
-
-
-
-      document.getElementById('name').focus();
-
-
-
-
-
-
-
-      return false;
-
-
-
-
-
-
-
-    }	
-
-
-
-
-
-
-
-	  if (document.getElementById('email').value == '') {	
-
-
-
-
-
-
-
-      alert('ກະລຸນາປ້ອນອີເມລ:');
-
-
-
-
-
-
-
-      document.getElementById('email').focus();
-
-
-
-
-
-
-
-      return false;
+      }
 
 
 
@@ -642,7 +297,7 @@ function checkForm(){
 
 
 
-    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById('email').value)) {
+    function fncKeyRePassword(pass) {
 
 
 
@@ -650,7 +305,7 @@ function checkForm(){
 
 
 
-      alert(' ຮູບແບບອີເມລບໍ່ຖືກຕ້ອງ :');
+      with(document.form1) {
 
 
 
@@ -658,7 +313,7 @@ function checkForm(){
 
 
 
-      document.getElementById('email').focus();
+        if (document.getElementById('re_password').length == document.getElementById('password').length) {
 
 
 
@@ -666,7 +321,573 @@ function checkForm(){
 
 
 
-      return false;
+          if (document.getElementById('re_password').value == document.getElementById('password').value) {
+
+
+
+
+
+
+
+            // alert(' การยืนยันรหัสผ่านไม่ถูกต้อง :');
+
+
+
+
+
+
+
+            //	  		document.getElementById("sp_text").innerHTML = "True";
+
+
+
+
+
+
+
+            $('#sp_text').html('<img src="images/icon/true.gif" width="30" height="30">');
+
+
+
+            //  document.getElementById('password').disabled = false;
+
+
+
+            //  document.getElementById('re_password').disabled = false;
+
+
+
+
+
+
+
+            //   document.getElementById('re_password').focus();
+
+
+
+
+
+
+
+            //   return false;
+
+
+
+
+
+
+
+          } else {
+
+
+
+
+
+
+
+            $('#sp_text').html('<img src="images/icon/false.gif" width="30" height="30">');
+
+
+
+
+
+
+
+            //	document.getElementById("sp_text").innerHTML = "False";
+
+
+
+
+
+
+
+            document.getElementById('re_password').value == '';
+
+
+
+
+
+
+
+            document.getElementById('re_password').focus();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          }
+
+
+
+
+
+
+
+        } else {
+
+
+
+
+
+
+
+          document.getElementById("sp_text").innerHTML = "False";
+
+
+
+
+
+
+
+          document.getElementById('re_password').value == '';
+
+
+
+
+
+
+
+          document.getElementById('re_password').focus();
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+      }
+
+
+
+
+
+
+
+    }
+  </script>
+
+
+
+
+
+
+
+  <!-- BEGIN Form. -->
+
+
+
+
+
+
+
+  <script language="javascript" type="text/javascript">
+    function checkForm() {
+
+
+
+
+
+
+
+      with(document.form1) {
+
+
+
+
+
+
+
+        // Check
+
+
+
+
+
+
+
+        if (document.getElementById('name').value == '') {
+
+
+
+
+
+
+
+          alert(' ກະລຸນາປ້ອນຊື່-ນາມສະກຸນ: :');
+
+
+
+
+
+
+
+          document.getElementById('name').focus();
+
+
+
+
+
+
+
+          return false;
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+        if (document.getElementById('email').value == '') {
+
+
+
+
+
+
+
+          alert('ກະລຸນາປ້ອນອີເມລ:');
+
+
+
+
+
+
+
+          document.getElementById('email').focus();
+
+
+
+
+
+
+
+          return false;
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+        if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById('email').value)) {
+
+
+
+
+
+
+
+          alert(' ຮູບແບບອີເມລບໍ່ຖືກຕ້ອງ :');
+
+
+
+
+
+
+
+          document.getElementById('email').focus();
+
+
+
+
+
+
+
+          return false;
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        if (document.getElementById('password').value == '') {
+
+
+
+
+
+
+
+          alert(' ກະລຸນາປ້ອນລະຫັດຜ່ານ :');
+
+
+
+
+
+
+
+          document.getElementById('password').focus();
+
+
+
+
+
+
+
+          return false;
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+        if (document.getElementById('re_password').value == '') {
+
+
+
+
+
+
+
+          alert(' ກະລຸນາປ້ອນລະຫັດຜ່ານຢືນຢັນ :');
+
+
+
+
+
+
+
+          document.getElementById('re_password').focus();
+
+
+
+
+
+
+
+          return false;
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        if (document.getElementById('bd_date').value == '') {
+
+
+
+
+
+
+
+          alert('ກະລຸນາປ້ອນວັນເດືອນປີ ເກີດ :');
+
+
+
+
+
+
+
+          document.getElementById('bd_date').focus();
+
+
+
+
+
+
+
+          return false;
+
+
+
+
+
+
+
+        }
+
+
+
+        if (document.getElementById('bd_month').value == '') {
+
+
+
+
+
+
+
+          alert('ກະລຸນາປ້ອນວັນເດືອນປີ ເກີດ :');
+
+
+
+
+
+
+
+          document.getElementById('bd_month').focus();
+
+
+
+
+
+
+
+          return false;
+
+
+
+
+
+
+
+        }
+
+
+
+        if (document.getElementById('bd_year').value == '') {
+
+
+
+
+
+
+
+          alert('ກະລຸນາປ້ອນວັນເດືອນປີ ເກີດ :');
+
+
+
+
+
+
+
+          document.getElementById('bd_year').focus();
+
+
+
+
+
+
+
+          return false;
+
+
+
+
+
+
+
+        }
+
+
+
+        SetAction('register_thank.php');
+
+
+
+
+
+
+
+        //return true;
+
+
+
+
+
+
+
+      }
 
 
 
@@ -682,7 +903,6 @@ function checkForm(){
 
 
 
-		
 
 
 
@@ -691,6 +911,7 @@ function checkForm(){
 
 
 
+    function SetAction(url) {
 
 
 
@@ -698,7 +919,7 @@ function checkForm(){
 
 
 
-    if (document.getElementById('password').value == '') {	
+      //alert("OK");
 
 
 
@@ -706,7 +927,7 @@ function checkForm(){
 
 
 
-      alert(' ກະລຸນາປ້ອນລະຫັດຜ່ານ :');
+      document.getElementById('form1').action = url;
 
 
 
@@ -714,7 +935,7 @@ function checkForm(){
 
 
 
-      document.getElementById('password').focus();
+      document.getElementById('form1').target = '_self';
 
 
 
@@ -722,7 +943,7 @@ function checkForm(){
 
 
 
-      return false;
+      document.getElementById('form1').submit();
 
 
 
@@ -731,6 +952,7 @@ function checkForm(){
 
 
     }
+  </script>
 
 
 
@@ -738,7 +960,7 @@ function checkForm(){
 
 
 
-    if (document.getElementById('re_password').value == '') {	
+  <!-- END Form. -->
 
 
 
@@ -746,7 +968,7 @@ function checkForm(){
 
 
 
-      alert(' ກະລຸນາປ້ອນລະຫັດຜ່ານຢືນຢັນ :');
+  <!-- BEGIN Captcha. -->
 
 
 
@@ -754,7 +976,8 @@ function checkForm(){
 
 
 
-      document.getElementById('re_password').focus();
+  <script language="javascript" type="text/javascript">
+    function refreshus() {
 
 
 
@@ -762,63 +985,7 @@ function checkForm(){
 
 
 
-      return false;
-
-
-
-
-
-
-
-    }	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-    if (document.getElementById('bd_date').value == '') {	
-
-
-
-
-
-
-
-      alert('ກະລຸນາປ້ອນວັນເດືອນປີ ເກີດ :');
-
-
-
-
-
-
-
-      document.getElementById('bd_date').focus();
-
-
-
-
-
-
-
-      return false;
+      $("#captchaimage").load("recaptcha.php");
 
 
 
@@ -827,234 +994,15 @@ function checkForm(){
 
 
     }
+  </script>
 
 
 
-    if (document.getElementById('bd_month').value == '') {	
 
 
 
 
-
-
-
-      alert('ກະລຸນາປ້ອນວັນເດືອນປີ ເກີດ :');
-
-
-
-
-
-
-
-      document.getElementById('bd_month').focus();
-
-
-
-
-
-
-
-      return false;
-
-
-
-
-
-
-
-    }
-
-
-
-    if (document.getElementById('bd_year').value == '') {	
-
-
-
-
-
-
-
-      alert('ກະລຸນາປ້ອນວັນເດືອນປີ ເກີດ :');
-
-
-
-
-
-
-
-      document.getElementById('bd_year').focus();
-
-
-
-
-
-
-
-      return false;
-
-
-
-
-
-
-
-    }	
-
-
-
-    SetAction('register_thank.php');
-
-
-
-
-
-
-
-    //return true;
-
-
-
-
-
-
-
-  }
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function SetAction(url) {
-
-
-
-
-
-
-
-	//alert("OK");
-
-
-
-
-
-
-
-	document.getElementById('form1').action = url;
-
-
-
-
-
-
-
-	document.getElementById('form1').target = '_self';
-
-
-
-
-
-
-
-	document.getElementById('form1').submit();
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-</script>
-
-
-
-
-
-
-
-<!-- END Form. -->
-
-
-
-
-
-
-
-<!-- BEGIN Captcha. -->
-
-
-
-
-
-
-
-<script language="javascript" type="text/javascript">
-
-
-
-
-
-
-
-function refreshus(){      
-
-
-
-
-
-
-
-  $("#captchaimage").load("recaptcha.php");
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-</script> 
-
-
-
-
-
-
-
-<!-- END Captcha. -->  
+  <!-- END Captcha. -->
 
 
 
@@ -1086,7 +1034,7 @@ function refreshus(){
 
 
 
-<?php include('inc_cart_left.php')?>
+  <?php include('inc_cart_left.php') ?>
 
 
 
@@ -1094,7 +1042,7 @@ function refreshus(){
 
 
 
-<div id="wrapper"> 
+  <div id="wrapper">
 
 
 
@@ -1102,7 +1050,7 @@ function refreshus(){
 
 
 
-  <!--Header-->
+    <!--Header-->
 
 
 
@@ -1110,7 +1058,7 @@ function refreshus(){
 
 
 
-  <div id="header"  >
+    <div id="header">
 
 
 
@@ -1118,7 +1066,7 @@ function refreshus(){
 
 
 
-    <?php if(isset($_SESSION['member_id'])){ ?>
+      <?php if (isset($_SESSION['member_id'])) { ?>
 
 
 
@@ -1126,7 +1074,7 @@ function refreshus(){
 
 
 
-    <?php include('inc_header_login.php')?>
+        <?php include('inc_header_login.php') ?>
 
 
 
@@ -1134,7 +1082,7 @@ function refreshus(){
 
 
 
-    <?php }else{?>
+      <?php } else { ?>
 
 
 
@@ -1142,7 +1090,7 @@ function refreshus(){
 
 
 
-    <?php include('inc_header.php')?>
+        <?php include('inc_header.php') ?>
 
 
 
@@ -1150,7 +1098,7 @@ function refreshus(){
 
 
 
-    <?php } ?>
+      <?php } ?>
 
 
 
@@ -1158,7 +1106,7 @@ function refreshus(){
 
 
 
-  </div>
+    </div>
 
 
 
@@ -1166,7 +1114,7 @@ function refreshus(){
 
 
 
-  <!--//header--> 
+    <!--//header-->
 
 
 
@@ -1174,7 +1122,6 @@ function refreshus(){
 
 
 
-  
 
 
 
@@ -1182,55 +1129,54 @@ function refreshus(){
 
 
 
-  <!--content-->
 
+    <!--content-->
 
 
 
 
 
 
-  <div id="Containner">
 
+    <div id="Containner">
 
 
 
 
 
 
-    <div class="content"> 
 
+      <div class="content">
 
 
 
 
 
 
-      <!--nav-->
 
+        <!--nav-->
 
 
 
 
 
 
-      <div class="nav post"> <a href="index.php" class="home">ໜ້າຫຼັກ</a>   <img src="images/icon/i_av.png" width="20" height="12"  alt=""/> <span>ລົງທະບຽນ</span> </div>
 
+        <div class="nav post"> <a href="index.php" class="home">ໜ້າຫຼັກ</a> <img src="images/icon/i_av.png" width="20" height="12" alt="" /> <span>ລົງທະບຽນ</span> </div>
 
 
 
 
 
 
-      <!--end nav--> 
 
+        <!--end nav-->
 
 
 
 
 
 
-      
 
 
 
@@ -1238,7 +1184,6 @@ function refreshus(){
 
 
 
-       
 
 
 
@@ -1246,47 +1191,46 @@ function refreshus(){
 
 
 
-      <!--New-->
 
 
 
+        <!--New-->
 
 
 
 
-      <div class="product_model post">
 
 
 
+        <div class="product_model post">
 
 
 
 
-      <form method="post" enctype="multipart/form-data" name="form1" id="form1" action="">
 
 
 
+          <form method="post" enctype="multipart/form-data" name="form1" id="form1" action="">
 
 
 
 
-         	<div class="box-content ">
 
 
 
+            <div class="box-content ">
 
 
 
 
-            	<h1><span>ລົງທະບຽນ</span></h1>
 
 
 
+              <h1><span>ລົງທະບຽນ</span></h1>
 
 
 
 
-                
 
 
 
@@ -1294,7 +1238,11 @@ function refreshus(){
 
 
 
-                <!--<div style="margin:30px 0">
+
+
+
+
+              <!--<div style="margin:30px 0">
 
 
 
@@ -1342,7 +1290,7 @@ function refreshus(){
 
 
 
-                 <div class="box-login">
+              <div class="box-login">
 
 
 
@@ -1350,7 +1298,7 @@ function refreshus(){
 
 
 
-                	 <ul class="form-all">
+                <ul class="form-all">
 
 
 
@@ -1358,7 +1306,7 @@ function refreshus(){
 
 
 
-                     	<li> <label>ຊື່ - ນາມສະກຸນ <span>*</span></label><input type="text" name="name" id="name"></li>
+                  <li> <label>ຊື່ - ນາມສະກຸນ <span>*</span></label><input type="text" name="name" id="name"></li>
 
 
 
@@ -1366,11 +1314,11 @@ function refreshus(){
 
 
 
-                     	<li> <label>ອີເມລ <span>*</span></label><input type="text" name="email" id="email" onchange="chkEmail(this.value);"></li>
+                  <li> <label>ອີເມລ <span>*</span></label><input type="text" name="email" id="email" onchange="chkEmail(this.value);"></li>
 
 
 
-                        <li><span id="username_check"></span></li>
+                  <li><span id="username_check"></span></li>
 
 
 
@@ -1378,7 +1326,7 @@ function refreshus(){
 
 
 
-                        <li> <label>ລະຫັດຜ່ານ <span>*</span></label><input type="password" name="password" id="password" onchange="fncKeyPassword(this.value,5);" maxlength="20"></li>
+                  <li> <label>ລະຫັດຜ່ານ <span>*</span></label><input type="password" name="password" id="password" onchange="fncKeyPassword(this.value,5);" maxlength="20"></li>
 
 
 
@@ -1386,7 +1334,7 @@ function refreshus(){
 
 
 
-                             <li> <label>ຢືນຢັນລະຫັດຜ່ານ <span>*</span></label><input type="password" name="re_password" id="re_password" onchange="fncKeyRePassword(this.value);" maxlength="20">
+                  <li> <label>ຢືນຢັນລະຫັດຜ່ານ <span>*</span></label><input type="password" name="re_password" id="re_password" onchange="fncKeyRePassword(this.value);" maxlength="20">
 
 
 
@@ -1394,7 +1342,6 @@ function refreshus(){
 
 
 
-                             
 
 
 
@@ -1402,81 +1349,80 @@ function refreshus(){
 
 
 
-                          <span style="font-size:12px;">[ຢ່າງໜ້ອຍ <span  class="numberEN">6</span> ຕົວໜັງສື ເຊິ່ງຈະຕ້ອງມີ <span  class="numberEN">1</span> ຕົວເລກ ແລະ <span  class="numberEN">1</span> ຕົວອັກສອນ]</span>
 
+                    <span style="font-size:12px;">[ຢ່າງໜ້ອຍ <span class="numberEN">6</span> ຕົວໜັງສື ເຊິ່ງຈະຕ້ອງມີ <span class="numberEN">1</span> ຕົວເລກ ແລະ <span class="numberEN">1</span> ຕົວອັກສອນ]</span>
 
 
 
 
 
 
-                            <span style="color:#F00;" id="sp_text"></span> </li>
 
+                    <span style="color:#F00;" id="sp_text"></span>
+                  </li>
 
 
 
 
 
 
-					   <li style="position:relative;"> <label>ວັນເດືອນປີ ເກີດ  <span>*</span></label>
 
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <li style="position:relative;"> <label>ວັນເດືອນປີ ເກີດ <span>*</span></label>
 
-  <tbody>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
 
-    <tr>
+                      <tbody>
 
-      <td  class="numberEN" style="padding-right:8px"><?php echo list_day('bd_date','bd_date',$this->bd_date,$class,$condition,'ວັນ');?></td>
+                        <tr>
 
-      <td  style="padding-right:8px;" class="select-m"><?php echo list_month('bd_month','bd_month',$this->bd_month,$class,$condition,'la')?></td>
+                          <td class="numberEN" style="padding-right:8px"><?php echo list_day('bd_date', 'bd_date', $this->bd_date, $class, $condition, 'ວັນ'); ?></td>
 
+                          <td style="padding-right:8px;" class="select-m"><?php echo list_month('bd_month', 'bd_month', $this->bd_month, $class, $condition, 'la') ?></td>
 
 
-      <td class="numberEN"><?php echo list_year('bd_year','bd_year',$this->bd_year,$class,$condition,'la')?></td>
 
+                          <td class="numberEN"><?php echo list_year('bd_year', 'bd_year', $this->bd_year, $class, $condition, 'la') ?></td>
 
 
-    </tr>
 
+                        </tr>
 
 
-  </tbody>
 
+                      </tbody>
 
 
-</table>
 
+                    </table>
 
 
 
 
 
 
-                        
 
 
 
-                        </i>
 
 
+                    </i>
 
 
 
 
 
-</li>
 
 
+                  </li>
 
-					   <li style="position:relative; margin-bottom:30px;">ເພດ<br>
 
 
+                  <li style="position:relative; margin-bottom:30px;">ເພດ<br>
 
 
 
 
 
- 
 
 
 
@@ -1492,67 +1438,67 @@ function refreshus(){
 
 
 
-                        <label style="width:20%; float:left;">  <input type="radio" name="sex" id="sex" value="male">ຊາຍ </label> 
 
 
 
+                    <label style="width:20%; float:left;"> <input type="radio" name="sex" id="sex" value="male">ຊາຍ </label>
 
 
 
 
-                        <label style="width:30%; float:left;">   <input type="radio" name="sex" id="sex" value="female">ຍິງ</label>                        <div class="clear"></div>
 
 
 
+                    <label style="width:30%; float:left;"> <input type="radio" name="sex" id="sex" value="female">ຍິງ</label>
+                    <div class="clear"></div>
 
 
 
 
-                       </li>
 
 
 
+                  </li>
 
 
 
 
-                         <li><label> <input type="checkbox" name="activate" value="1" id="checkbox" />
 
 
 
+                  <li><label> <input type="checkbox" name="activate" value="1" id="checkbox" />
 
 
 
 
-ເມື່ອຄຼິກທີ່ປຸ່ມ ລົງທະບຽນ, ທ່ານຢືນຢັນວ່າທ່ານໄດ້ອ່ານ ແລະເຫັນດີຕາມ <a href="payment_policy.php" style="text-decoration:underline">ນະໂຍບາຍການສັ່ງຊື້ສິນຄ້າຂອງຮ້ານນາຣີ</a></label>
 
 
 
-                         </li>
+                      ເມື່ອຄຼິກທີ່ປຸ່ມ ລົງທະບຽນ, ທ່ານຢືນຢັນວ່າທ່ານໄດ້ອ່ານ ແລະເຫັນດີຕາມ <a href="payment_policy.php" style="text-decoration:underline">ນະໂຍບາຍການສັ່ງຊື້ສິນຄ້າຂອງຮ້ານນາຣີ</a></label>
 
 
 
+                  </li>
 
 
 
 
-                        <li><input name="do" type="hidden" value="insert"><input type="button" class="btn-login" value="ລົງທະບຽນ" onClick="return checkForm()"></li>
 
 
 
+                  <li><input name="do" type="hidden" value="insert"><input type="button" class="btn-login" value="ລົງທະບຽນ" onClick="return checkForm()"></li>
 
 
 
 
-                        <li style="text-align:center"><a href="javascript:void();" onClick="document.getElementById('form1').reset()">ຫຼື ລົບລ້າງ</a></li>
 
 
 
+                  <li style="text-align:center"><a href="javascript:void();" onClick="document.getElementById('form1').reset()">ຫຼື ລົບລ້າງ</a></li>
 
 
 
 
-                         
 
 
 
@@ -1560,23 +1506,22 @@ function refreshus(){
 
 
 
-                     </ul>
 
 
 
 
+                </ul>
 
 
 
-                </div>
 
 
 
 
+              </div>
 
 
 
-                
 
 
 
@@ -1584,7 +1529,6 @@ function refreshus(){
 
 
 
-                
 
 
 
@@ -1592,7 +1536,13 @@ function refreshus(){
 
 
 
-                
+
+
+
+
+
+
+
 
 
 
@@ -1608,7 +1558,47 @@ function refreshus(){
 
 
 
-      </form>      
+          </form>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <!--Model-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1624,7 +1614,7 @@ function refreshus(){
 
 
 
-      <!--Model--> 
+    </div>
 
 
 
@@ -1632,7 +1622,7 @@ function refreshus(){
 
 
 
-      
+    <!--end content-->
 
 
 
@@ -1640,7 +1630,6 @@ function refreshus(){
 
 
 
-         
 
 
 
@@ -1648,7 +1637,24 @@ function refreshus(){
 
 
 
-      
+
+    <!--footer-->
+
+
+
+
+
+
+
+    <div id="footer">
+
+
+
+
+
+
+
+      <?php include('inc_footer.php'); ?>
 
 
 
@@ -1664,7 +1670,7 @@ function refreshus(){
 
 
 
-  </div>
+    <!--end footer-->
 
 
 
@@ -1672,39 +1678,7 @@ function refreshus(){
 
 
 
-  <!--end content--> 
 
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  <!--footer-->
-
-
-
-
-
-
-
-  <div id="footer" >
-
-
-
-
-
-
-
-    <?php include('inc_footer.php');?>
 
 
 
@@ -1713,30 +1687,6 @@ function refreshus(){
 
 
   </div>
-
-
-
-
-
-
-
-  <!--end footer--> 
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-</div>
 
 
 
@@ -1761,10 +1711,3 @@ function refreshus(){
 
 
 </html>
-
-
-
-
-
-
-

@@ -65,9 +65,9 @@ if (isset($_SESSION['session_login']) && $_SESSION['session_login'] != NULL) {
         var count = parseInt(data) || 0;
 
         if (count <= 0) {
-          $('#yourcart-num').hide();
+          $('.yourcart-num').hide();
         } else {
-          $('#yourcart-num').show().text(count);
+          $('.yourcart-num').show().text(count);
         }
       });
     }
@@ -201,7 +201,7 @@ if (isset($_SESSION['session_login']) && $_SESSION['session_login'] != NULL) {
 <header class="header">
   <div class="header-top">
     <div class="brand-logo">
-      <a href="index.php" >
+      <a href="index.php">
         <img
           src="/underrenovation/images/Naree_Logo.svg"
           alt="NR NAREE" />
@@ -245,15 +245,13 @@ if (isset($_SESSION['session_login']) && $_SESSION['session_login'] != NULL) {
               src="/underrenovation/images/user_add_icons.svg" />
           </a>
 
-          <div class="mn-mobile-cart" ;>
+          <div class="mn-desktop-cart" ;>
             <a href="#nogo" id="mycart">
 
-              <img src="/underrenovation/images/register.svg" class="cart-icon" alt="Cart" />
+              <img src="/underrenovation/images/register.svg" alt="Cart" />
 
               <!-- RED BADGE -->
-
-              <span id="yourcart-num" class="num-items" style="display:none"></span>
-
+              <span class="yourcart-num num-items" style="display:none;"></span>
 
             </a>
           </div>
@@ -291,10 +289,18 @@ if (isset($_SESSION['session_login']) && $_SESSION['session_login'] != NULL) {
       </div>
       <div class="right-fa-bars">
         <input type="checkbox" id="menu-toggle" class="dropdown-checkbox" />
-        <a href="#" target="_blank">
-          <img
-            src="/underrenovation/images/Register.svg" class="register-icon" />
-        </a>
+        <div class="mn-mobile-cart"><a href="#nogo" id="mycart">
+            <?php if ($gettmp['total_amount'] != 0) { ?>
+              <span class="num-items yourcart-num">
+                <?php echo $gettmp['total_amount'] ?>
+              </span>
+            <?php } ?>
+
+            <!-- // Amount No of Order -->
+
+            <img src="/underrenovation/images/Register.svg" class="cart-icon" alt="Cart" />
+            
+          </a></div>
         <label for="menu-toggle" class="menu-btn">
           <i class="fa fa-bars"></i>
           <i class="fa fa-times"></i>
@@ -330,7 +336,7 @@ if (isset($_SESSION['session_login']) && $_SESSION['session_login'] != NULL) {
             <li><a href="naree_story.php">ເລື່ອງລາວຂອງພວກເຮົາ</a></li>
             <li><a href="lookbook.php">ກະເປົາແບບຢ່າງ</a></li>
             <li><a href="contact.php">ຕິດຕໍ່ພວກເຮົາ</a></li>
-            <li class="lang-switch"><a href="<?php echo str_replace('/new-la/', '/new-en/',  $_SERVER['REQUEST_URI']) ?>" style="text-align:center;">ENGLISH </a></li>
+            <li class="lang-switch-2"><a href="<?php echo str_replace('/new-la/', '/new-en/',  $_SERVER['REQUEST_URI']) ?>" style="text-align:center;">ENGLISH </a></li>
 
           </ul>
         </div>

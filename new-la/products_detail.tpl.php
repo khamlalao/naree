@@ -12,383 +12,382 @@
 
 
 
-<script type="text/javascript">
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
 
-jQuery(document).ready(function($) {
+      $.get('order_alert.php', {
 
-	$.get('order_alert.php', {
+        session: '<?php echo $_SESSION['session_login'] ?>',
 
-		session : '<?php echo $_SESSION['session_login']?>',
+        time: new Date().getTime()
 
-		time : new Date().getTime()
+      }, function(data) {
 
-		}, function(data) {
+        //	alert(data);
+        if (data != '') {
 
-		//	alert(data);
-		if(data != ''){
+          $('#yourcart-num').html('<span id="yourcart-num" class="num-items">' + data + '</span>'); //cartnum
+        }
+        // $('#yourcart-num').html(data);
+        //	$('#cartnum').html(data);
+      });
 
-	  $('#yourcart-num').html('<span id="yourcart-num" class="num-items">'+data+'</span>'); //cartnum
-		}
-	// $('#yourcart-num').html(data);
-	//	$('#cartnum').html(data);
-	});
+      /*	setInterval(function(){
+      		$.get('order_alert.php', {
+      				session : '<?php //=$_SESSION['session_login']
+                          ?>',
+      				time : new Date().getTime()
+      				}, function(data) {
+      				//	alert(data);
+      				  $('#yourcart-num').html(data);
+      			  });
+      		}, 0);
+      */
+      $('#add2Cart').click(function() {
 
-/*	setInterval(function(){
-		$.get('order_alert.php', {
-				session : '<?php //=$_SESSION['session_login']?>',
-				time : new Date().getTime()
-				}, function(data) {
-				//	alert(data);
-				  $('#yourcart-num').html(data);
-			  });
-		}, 0);
-*/
-	$('#add2Cart').click(function(){
+        var num = document.getElementById('amount').value;
 
-		var num = document.getElementById('amount').value;
+        //alert(num);	
 
-		//alert(num);	
+        var id = '<?php echo $this->id ?>';
 
-		var id = '<?php echo $this->id?>';
-		
-				$.get('inc_cart_add.php', {
-				id : id,
-				action : 'additem',
-				amount : num,				
-				time : new Date().getTime()
+        $.get('inc_cart_add.php', {
+          id: id,
+          action: 'additem',
+          amount: num,
+          time: new Date().getTime()
 
-				}, function(data) {
-					//alert(data);
-				  });	
+        }, function(data) {
+          //alert(data);
+        });
 
 
-			  $.get('inc_cart_render.php', {
-				id : id,
-				time : new Date().getTime()
-				}, function(data) {
-				//	alert(data);
-				  $('#default_cart').html(data);
-				//  $('#amount_incart').html(data)
-				//	alert(data);
+        $.get('inc_cart_render.php', {
+          id: id,
+          time: new Date().getTime()
+        }, function(data) {
+          //	alert(data);
+          $('#default_cart').html(data);
+          //  $('#amount_incart').html(data)
+          //	alert(data);
 
-			  });	
+        });
 
 
-			 $.get('inc_your_item.php', {
-				id : id,
-				time : new Date().getTime()
-				}, function(data) {
-					//alert(data);
-				  $('#yourcart-item').html(data);
-				  $('#yourcart-num').html('<span id="yourcart-num" class="num-items">'+data+'</span>');
-			   });
+        $.get('inc_your_item.php', {
+          id: id,
+          time: new Date().getTime()
+        }, function(data) {
+          //alert(data);
+          $('#yourcart-item').html(data);
+          $('#yourcart-num').html('<span id="yourcart-num" class="num-items">' + data + '</span>');
+        });
 
 
-			  $.get('inc_cash_amount.php', {
-				rate : 'USD',
-				time : new Date().getTime()
-				}, function(data) {
-					//alert(data);
-				  $('#cashAmount').html(data);
-			   });
-			   $.get('inc_cash_amount.php', {
-				rate : 'LAK',
-				time : new Date().getTime()
-				}, function(data) {
-					//alert(data);
-				  $('#cashAmount_KIP').html(data);
-			   });
+        $.get('inc_cash_amount.php', {
+          rate: 'USD',
+          time: new Date().getTime()
+        }, function(data) {
+          //alert(data);
+          $('#cashAmount').html(data);
+        });
+        $.get('inc_cash_amount.php', {
+          rate: 'LAK',
+          time: new Date().getTime()
+        }, function(data) {
+          //alert(data);
+          $('#cashAmount_KIP').html(data);
+        });
 
-			MyCart();
+        MyCart();
 
-		 });
-});
+      });
+    });
 
-function addtocart(obj){
+    function addtocart(obj) {
 
-	// alert(obj);
+      // alert(obj);
 
-	 
 
-	var num = document.getElementById('amount').value;
 
-	 //alert($('#amount').val());
+      var num = document.getElementById('amount').value;
 
-	// alert(num);
+      //alert($('#amount').val());
 
-	//amount : $("#amount").val();
+      // alert(num);
 
-	//var delItem = $("#amount").val();
+      //amount : $("#amount").val();
 
-	if(obj == 'add'){
+      //var delItem = $("#amount").val();
 
-	//	alert('+');
+      if (obj == 'add') {
 
-		var num = document.getElementById('amount').value;
+        //	alert('+');
 
-		//alert(num);
+        var num = document.getElementById('amount').value;
 
-		var new_add = new Number(num)+1;
+        //alert(num);
 
-		//alert(new_add);
+        var new_add = new Number(num) + 1;
 
-		//$('#amount').val(new_add); 
+        //alert(new_add);
 
-		document.getElementById('amount').value = new_add;
+        //$('#amount').val(new_add); 
 
+        document.getElementById('amount').value = new_add;
 
 
 
 
-	}
 
-	if(obj == 'del'){
+      }
 
-		//	alert('-');
+      if (obj == 'del') {
 
-		var num = document.getElementById('amount').value;
+        //	alert('-');
 
-		//alert(num);
+        var num = document.getElementById('amount').value;
 
-		if(num > 1){
+        //alert(num);
 
-		var new_add = new Number(num)-1;
+        if (num > 1) {
 
-		//alert(new_add);
+          var new_add = new Number(num) - 1;
 
-		//$('#amount').val(new_add); 
+          //alert(new_add);
 
-		document.getElementById('amount').value = new_add;
+          //$('#amount').val(new_add); 
 
-		}
+          document.getElementById('amount').value = new_add;
 
-		
+        }
 
-	}
 
-	
 
-}
+      }
 
 
 
-function removeItem(id){
-				//alert(id);
-		jQuery(document).ready(function($) {
-				//	alert("xx");
-					$.get('inc_cart_remove.php', {
-					id : id,
-					action : 'remove',
-					time : new Date().getTime()
-					}, function(data) {
-					  $('#default_cart').html(data);
-					//  alert(data);
-				  });
-	  });
-		
-		jQuery(document).ready(function($) {			   
-			   $.get('inc_cash_amount.php', {
-				rate : 'LAK',
-				time : new Date().getTime()
-				}, function(data) {
-				//	alert(data);
-				  $('#cashAmount_KIP').html(data);
-			   });			   
-		  });	   
-}
+    }
 
-function addcart(obj,id){
 
-	// alert(obj+id);
 
-	var amount = 'amount'+id; 
+    function removeItem(id) {
+      //alert(id);
+      jQuery(document).ready(function($) {
+        //	alert("xx");
+        $.get('inc_cart_remove.php', {
+          id: id,
+          action: 'remove',
+          time: new Date().getTime()
+        }, function(data) {
+          $('#default_cart').html(data);
+          //  alert(data);
+        });
+      });
 
-	var num = document.getElementById(amount).value;
+      jQuery(document).ready(function($) {
+        $.get('inc_cash_amount.php', {
+          rate: 'LAK',
+          time: new Date().getTime()
+        }, function(data) {
+          //	alert(data);
+          $('#cashAmount_KIP').html(data);
+        });
+      });
+    }
 
-	// alert(num);
+    function addcart(obj, id) {
 
-	if(obj == 'add'){
+      // alert(obj+id);
 
-		var num = document.getElementById(amount).value;
+      var amount = 'amount' + id;
 
-		var newAmount = new Number(num)+1;
+      var num = document.getElementById(amount).value;
 
-		document.getElementById(amount).value = newAmount;
+      // alert(num);
 
-		
+      if (obj == 'add') {
 
-		jQuery(document).ready(function($) {
+        var num = document.getElementById(amount).value;
 
-			$.get('inc_cart_render.php', {
+        var newAmount = new Number(num) + 1;
 
-				id : id,
+        document.getElementById(amount).value = newAmount;
 
-				action : 'insert',
 
-				amount : newAmount,
 
-				time : new Date().getTime()
+        jQuery(document).ready(function($) {
 
-				}, function(data) {
-				//	alert(data);
+          $.get('inc_cart_render.php', {
 
-				  $('#default_cart').html(data);
+            id: id,
 
-			  });	
+            action: 'insert',
 
-				$.get('inc_cash_amount.php', {
-				id : id,
-				time : new Date().getTime()
-				}, function(data) {
-				//alert(data);
-				  $('#cashAmount').html(data);
-			   });		
-         });
-		
+            amount: newAmount,
 
-	}
+            time: new Date().getTime()
 
-	if(obj == 'del'){
+          }, function(data) {
+            //	alert(data);
 
-		var num = document.getElementById(amount).value;
+            $('#default_cart').html(data);
 
-		if(num > 1){
+          });
 
-		var newAmount = new Number(num)-1;
+          $.get('inc_cash_amount.php', {
+            id: id,
+            time: new Date().getTime()
+          }, function(data) {
+            //alert(data);
+            $('#cashAmount').html(data);
+          });
+        });
 
-		document.getElementById(amount).value = newAmount;
 
-		//	$('#cashAmount').html('2');
+      }
 
-		
-		jQuery(document).ready(function($) {
-				$.get('inc_cart_render.php', {
+      if (obj == 'del') {
 
-				id : id,
-				action : 'delete',
-				amount : newAmount,
+        var num = document.getElementById(amount).value;
 
-				time : new Date().getTime()
-				}, function(data) {
-				//	alert(data);
+        if (num > 1) {
 
-				  $('#default_cart').html(data);
-			  });	
-		
-			$.get('inc_cash_amount.php', {
-				id : id,
-				time : new Date().getTime()
-				}, function(data) {
-				//alert(data);
-				  $('#cashAmount').html(data);
-			   });  		
-		
-		 });
-		
+          var newAmount = new Number(num) - 1;
 
+          document.getElementById(amount).value = newAmount;
 
+          //	$('#cashAmount').html('2');
 
-		}
 
-	}
+          jQuery(document).ready(function($) {
+            $.get('inc_cart_render.php', {
 
+              id: id,
+              action: 'delete',
+              amount: newAmount,
 
+              time: new Date().getTime()
+            }, function(data) {
+              //	alert(data);
 
-	//alert(newAmount);
+              $('#default_cart').html(data);
+            });
 
-	
+            $.get('inc_cash_amount.php', {
+              id: id,
+              time: new Date().getTime()
+            }, function(data) {
+              //alert(data);
+              $('#cashAmount').html(data);
+            });
 
-	
+          });
 
-}
 
 
 
-function MyCart(){
+        }
 
-			  			
+      }
 
-	jQuery("#box-cart-app").animate({  right: '0'}, 300);
 
-	jQuery(".dim").fadeIn();
 
-	jQuery("body").addClass('has-active-menu');
+      //alert(newAmount);
 
-}
 
 
 
-	
-</script> 
-<script type="text/javascript">
-	jQuery(function(){
-			
-//$('.menu').hide();
-		$('#mn-mobile-close-login').hide();
-		$('#mn-mobile-login').click(function(){
-		
-			$('.menu').slideDown();
-			$('#mn-mobile-login').hide();
-			$('#mn-mobile-close-login').show();
-		 });
-		$('#mn-mobile-close-login').click(function(){
-			
-			$('.menu').slideUp();
-			$('#mn-mobile-login').show();
-			$('#mn-mobile-close-login').hide();
-		 });
-		 
-		 $('#click-member-subpro').click(function(){
-			
-			$('.dropdown ul#product-member-sub').slideToggle();
-			//$('#mn-mobile').hide();
-			//$('#mn-mobile-close').show();
-		 });
-		 
-		  $('#click-submember').click(function(){
-			
-			$('.dropdown ul#member-sub').slideToggle();
-			//$('#mn-mobile').hide();
-			//$('#mn-mobile-close').show();
-		 });
-		 
- 			$('#click-menber-subpromo').click(function(){
-			
-			$('.dropdown ul#promo-menber-sub').slideToggle();
-			//$('#mn-mobile').hide();
-			//$('#mn-mobile-close').show();
-		 });
 
- <!--2-->
-		 $('#mn-mobile-close-pro').hide();
-		$('#mn-mobile-pro').click(function(){
-			
-			$('.menu').slideDown();
-			$('#mn-mobile-pro').hide();
-			$('#mn-mobile-close-pro').show();
-		 });
-		$('#mn-mobile-close-pro').click(function(){
-			
-			$('.menu').slideUp();
-			$('#mn-mobile-pro').show();
-			$('#mn-mobile-close-pro').hide();
-		 });
-		 $('#click-subpro').click(function(){
-			 
-			$('.dropdown ul#product-sub').slideToggle();
-			//$('#mn-mobile').hide();
-			//$('#mn-mobile-close').show();
-		 });
-		 
-		 
-		  $('#click-subpromo').click(function(){
-				 
-			$('.dropdown ul#promo-sub').slideToggle();
-			//$('#mn-mobile').hide();
-			//$('#mn-mobile-close').show();
-		 });
-		});
-</script>
+    }
+
+
+
+    function MyCart() {
+
+
+
+      jQuery("#box-cart-app").animate({
+        right: '0'
+      }, 300);
+
+      jQuery(".dim").fadeIn();
+
+      jQuery("body").addClass('has-active-menu');
+
+    }
+  </script>
+  <script type="text/javascript">
+    jQuery(function() {
+
+      //$('.menu').hide();
+      $('#mn-mobile-close-login').hide();
+      $('#mn-mobile-login').click(function() {
+
+        $('.menu').slideDown();
+        $('#mn-mobile-login').hide();
+        $('#mn-mobile-close-login').show();
+      });
+      $('#mn-mobile-close-login').click(function() {
+
+        $('.menu').slideUp();
+        $('#mn-mobile-login').show();
+        $('#mn-mobile-close-login').hide();
+      });
+
+      $('#click-member-subpro').click(function() {
+
+        $('.dropdown ul#product-member-sub').slideToggle();
+        //$('#mn-mobile').hide();
+        //$('#mn-mobile-close').show();
+      });
+
+      $('#click-submember').click(function() {
+
+        $('.dropdown ul#member-sub').slideToggle();
+        //$('#mn-mobile').hide();
+        //$('#mn-mobile-close').show();
+      });
+
+      $('#click-menber-subpromo').click(function() {
+
+        $('.dropdown ul#promo-menber-sub').slideToggle();
+        //$('#mn-mobile').hide();
+        //$('#mn-mobile-close').show();
+      });
+
+      <
+      !--2-- >
+      $('#mn-mobile-close-pro').hide();
+      $('#mn-mobile-pro').click(function() {
+
+        $('.menu').slideDown();
+        $('#mn-mobile-pro').hide();
+        $('#mn-mobile-close-pro').show();
+      });
+      $('#mn-mobile-close-pro').click(function() {
+
+        $('.menu').slideUp();
+        $('#mn-mobile-pro').show();
+        $('#mn-mobile-close-pro').hide();
+      });
+      $('#click-subpro').click(function() {
+
+        $('.dropdown ul#product-sub').slideToggle();
+        //$('#mn-mobile').hide();
+        //$('#mn-mobile-close').show();
+      });
+
+
+      $('#click-subpromo').click(function() {
+
+        $('.dropdown ul#promo-sub').slideToggle();
+        //$('#mn-mobile').hide();
+        //$('#mn-mobile-close').show();
+      });
+    });
+  </script>
 </head>
 
 
@@ -548,145 +547,154 @@ function MyCart(){
 
   <div id="wrapper">
     <header class="header">
-  <div class="header-top">
-    <div class="brand-logo">
-      <a href="index.php" target="_blank">
-        <img
-          src="/underrenovation/images/Naree_Logo.svg"
-          alt="NR NAREE" />
-      </a>
-    </div>
-
-    <div class="header-right-group">
-      <div class="nav-right">
-        <div class="top-icons">
-          <a href="index.php" class="home">
+      <div class="header-top">
+        <div class="brand-logo">
+          <a href="index.php" target="_blank">
             <img
-              src="/underrenovation/images/home_header-icon.svg" />
+              src="/underrenovation/images/Naree_Logo.svg"
+              alt="NR NAREE" />
           </a>
-
-          <div class="banner-social">
-            <a href="https://www.facebook.com/nareehandbags" target="_blank">
-              <img
-                src="/underrenovation/images/facebook_icons.svg" />
-            </a>
-            <a
-              href="https://www.instagram.com/nareehandbags/?hl=th"
-              target="_blank">
-              <img
-                src="/underrenovation/images/instagram.svg" />
-            </a>
-            <a href="https://www.tiktok.com/@naree.official" target="_blank">
-              <img
-                src="/underrenovation/images/tiktok-icon.png" />
-            </a>
-            <a href="https://wa.me/8562023071333" target="_blank">
-              <img
-                src="/underrenovation/images/whatsapp-line-1.svg" />
-            </a>
-            <a href="https://line.me/R/ti/p/nareehandbag" target="_blank">
-              <img
-                src="/underrenovation/images/line.svg" />
-            </a>
-          </div>
-          <a href="member_login.php" target="_blank">
-            <img
-              src="/underrenovation/images/user_add_icons.svg" />
-          </a>
-
-          <div class="mn-mobile-cart" ;>
-            <a href="#nogo" id="mycart">
-
-              <img src="/underrenovation/images/register.svg" class="cart-icon" alt="Cart" />
-
-              <!-- RED BADGE -->
-
-              <span id="yourcart-num"></span>
-
-
-            </a>
-          </div>
-
-          <?php
-          $current_page = basename($_SERVER['PHP_SELF']);
-
-          function isActive($link_name, $current_page)
-          {
-            return ($link_name == $current_page) ? 'active' : '';
-          }
-          ?>
-          <li class="lang-switch"><a href="<?php echo str_replace('/new-la/', '/new-en/',  $_SERVER['REQUEST_URI']) ?>" style="text-align:center;">ENGLISH </a></li>
         </div>
-        <nav class="main-nav">
-          <ul class="nav-links">
-            <li class="dropdown">
-              <button class="dropbtn">
-                ສິນຄ້າທັງໝົດ <i class="fa-solid fa-chevron-up"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="products_all.php">ກະເປົາ <span class="arrow">→</span></a>
-                <a href="#">ເສື້ອຜ້າ <span class="arrow">→</span></a>
-                <a href="#">ເຄື່ອງປະດັບ <span class="arrow">→</span></a>
-              </div>
-            </li>
-            <li><a href="" class="pill-btn <?php echo isActive('', $current_page); ?>">ສິດທິພິເສດ</a></li>
-            <li><a href="" class="pill-btn <?php echo isActive('', $current_page); ?>">ເຄັດລັບ</a></li>
-            <li><a href="promotion-all.php" class="pill-btn <?php echo isActive('promotion-all.php', $current_page); ?>">ໂປຣໂມຊັ່ນ</a></li>
-            <li><a href="naree_story.php" class="pill-btn <?php echo isActive('naree_story.php', $current_page); ?>">ປະຫວັດນາຣີ</a></li>
-            <li><a href="lookbook.php" class="pill-btn <?php echo isActive('lookbook.php', $current_page); ?>">ແບບຢ່າງກະເປົາ</a></li>
-            <li><a href="contact.php" class="pill-btn <?php echo isActive('contact.php', $current_page); ?>">ຕິດຕໍ່ພວກເຮົາ</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="right-fa-bars">
-        <input type="checkbox" id="menu-toggle" class="dropdown-checkbox" />
-        <a href="#" target="_blank">
-          <img
-            src="/underrenovation/images/Register.svg" class="register-icon" />
-        </a>
-        <label for="menu-toggle" class="menu-btn">
-          <i class="fa fa-bars"></i>
-          <i class="fa fa-times"></i>
-        </label>
-        <div class="menu">
-          <ul>
-            <li class="dropdown">
-              <input type="checkbox" id="products-toggle" />
 
-              <label for="products-toggle" class="dropbtn">
-                ສິນຄ້າທັງໝົດ <i class="fa-solid fa-chevron-up"></i>
-              </label>
-              <div class="dropdown-content">
-                <a href="products_all.php">ກະເປົາ <span class="arrow">→</span></a>
-                <a href="#">ເສື້ອຜ້າ <span class="arrow">→</span></a>
-                <a href="#">ເຄື່ອງປະດັບ <span class="arrow">→</span></a>
+        <div class="header-right-group">
+          <div class="nav-right">
+            <div class="top-icons">
+              <a href="index.php" class="home">
+                <img
+                  src="/underrenovation/images/home_header-icon.svg" />
+              </a>
+
+              <div class="banner-social">
+                <a href="https://www.facebook.com/nareehandbags" target="_blank">
+                  <img
+                    src="/underrenovation/images/facebook_icons.svg" />
+                </a>
+                <a
+                  href="https://www.instagram.com/nareehandbags/?hl=th"
+                  target="_blank">
+                  <img
+                    src="/underrenovation/images/instagram.svg" />
+                </a>
+                <a href="https://www.tiktok.com/@naree.official" target="_blank">
+                  <img
+                    src="/underrenovation/images/tiktok-icon.png" />
+                </a>
+                <a href="https://wa.me/8562023071333" target="_blank">
+                  <img
+                    src="/underrenovation/images/whatsapp-line-1.svg" />
+                </a>
+                <a href="https://line.me/R/ti/p/nareehandbag" target="_blank">
+                  <img
+                    src="/underrenovation/images/line.svg" />
+                </a>
               </div>
-            </li>
-            <div class="icon-name-menu">
-              <li><a href="index.php">ໜ້າຫຼັກ</a></li>
-              <li><a href="login.php">ເຂົ້າສູ່ລະບົບ</a></li>
-              <li><a href="https://www.facebook.com/nareehandbags">ເຟສບຸກ</a></li>
-              <li><a href="https://www.instagram.com/nareehandbags/?hl=th">ອິນສະຕາແກຣມ</a></li>
-              <li><a href="https://www.tiktok.com/@naree.official">ຕິກຕັອກ</a></li>
-              <li><a href="https://wa.me/8562023071333">ວັອດແອັບ</a></li>
-              <li><a href="https://line.me/R/ti/p/nareehandbag">ໄລນ໌</a></li>
-              <li><a href="#">ເພີ່ມຜູ້ໃຊ້</a></li>
+              <a href="member_login.php" target="_blank">
+                <img
+                  src="/underrenovation/images/user_add_icons.svg" />
+              </a>
+
+              <div class="mn-desktop-cart" ;>
+                <a href="#nogo" id="mycart">
+
+                  <img src="/underrenovation/images/register.svg" class="cart-icon" alt="Cart" />
+
+                  <!-- RED BADGE -->
+
+                  <span id="yourcart-num"></span>
+
+
+                </a>
+              </div>
+
+              <?php
+              $current_page = basename($_SERVER['PHP_SELF']);
+
+              function isActive($link_name, $current_page)
+              {
+                return ($link_name == $current_page) ? 'active' : '';
+              }
+              ?>
+              <li class="lang-switch"><a href="<?php echo str_replace('/new-la/', '/new-en/',  $_SERVER['REQUEST_URI']) ?>" style="text-align:center;">ENGLISH </a></li>
             </div>
+            <nav class="main-nav">
+              <ul class="nav-links">
+                <li class="dropdown">
+                  <button class="dropbtn">
+                    ສິນຄ້າທັງໝົດ <i class="fa-solid fa-chevron-up"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="products_all.php">ກະເປົາ <span class="arrow">→</span></a>
+                    <a href="#">ເສື້ອຜ້າ <span class="arrow">→</span></a>
+                    <a href="#">ເຄື່ອງປະດັບ <span class="arrow">→</span></a>
+                  </div>
+                </li>
+                <li><a href="" class="pill-btn <?php echo isActive('', $current_page); ?>">ສິດທິພິເສດ</a></li>
+                <li><a href="" class="pill-btn <?php echo isActive('', $current_page); ?>">ເຄັດລັບ</a></li>
+                <li><a href="promotion-all.php" class="pill-btn <?php echo isActive('promotion-all.php', $current_page); ?>">ໂປຣໂມຊັ່ນ</a></li>
+                <li><a href="naree_story.php" class="pill-btn <?php echo isActive('naree_story.php', $current_page); ?>">ປະຫວັດນາຣີ</a></li>
+                <li><a href="lookbook.php" class="pill-btn <?php echo isActive('lookbook.php', $current_page); ?>">ແບບຢ່າງກະເປົາ</a></li>
+                <li><a href="contact.php" class="pill-btn <?php echo isActive('contact.php', $current_page); ?>">ຕິດຕໍ່ພວກເຮົາ</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="right-fa-bars">
+            <input type="checkbox" id="menu-toggle" class="dropdown-checkbox" />
+            <div class="mn-mobile-cart"><a href="#nogo" id="mycart">
+                <?php if ($gettmp['total_amount'] != 0) { ?>
+                  <div class="yourcart-num num-items">
+                    <?php echo $gettmp['total_amount'] ?>
+                  </div>
+                <?php } ?>
 
-            <li><a href="#">ສິດທິພິເສດ</a></li>
-            <li><a href="#">ເຄັດລັບ</a></li>
-            <li><a href="promotion-all.php">ໂປຣໂມຊັນ</a></li>
-            <li><a href="naree_story.php">ເລື່ອງລາວຂອງພວກເຮົາ</a></li>
-            <li><a href="lookbook.php">ກະເປົາແບບຢ່າງ</a></li>
-            <li><a href="contact.php">ຕິດຕໍ່ພວກເຮົາ</a></li>
-            <li class="lang-switch"><a href="<?php echo str_replace('/new-la/', '/new-en/',  $_SERVER['REQUEST_URI']) ?>" style="text-align:center;">ENGLISH </a></li>
 
-          </ul>
+                <!-- // Amount No of Order -->
+                <img src="/underrenovation/images/register.svg" class="cart-icon" alt="Cart" />
+                <span class="num-items yourcart-num"></span>
+
+              </a></div>
+            <label for="menu-toggle" class="menu-btn">
+              <i class="fa fa-bars"></i>
+              <i class="fa fa-times"></i>
+            </label>
+            <div class="menu">
+              <ul>
+                <li class="dropdown">
+                  <input type="checkbox" id="products-toggle" />
+
+                  <label for="products-toggle" class="dropbtn">
+                    ສິນຄ້າທັງໝົດ <i class="fa-solid fa-chevron-up"></i>
+                  </label>
+                  <div class="dropdown-content">
+                    <a href="products_all.php">ກະເປົາ <span class="arrow">→</span></a>
+                    <a href="#">ເສື້ອຜ້າ <span class="arrow">→</span></a>
+                    <a href="#">ເຄື່ອງປະດັບ <span class="arrow">→</span></a>
+                  </div>
+                </li>
+                <div class="icon-name-menu">
+                  <li><a href="index.php">ໜ້າຫຼັກ</a></li>
+                  <li><a href="login.php">ເຂົ້າສູ່ລະບົບ</a></li>
+                  <li><a href="https://www.facebook.com/nareehandbags">ເຟສບຸກ</a></li>
+                  <li><a href="https://www.instagram.com/nareehandbags/?hl=th">ອິນສະຕາແກຣມ</a></li>
+                  <li><a href="https://www.tiktok.com/@naree.official">ຕິກຕັອກ</a></li>
+                  <li><a href="https://wa.me/8562023071333">ວັອດແອັບ</a></li>
+                  <li><a href="https://line.me/R/ti/p/nareehandbag">ໄລນ໌</a></li>
+                  <li><a href="#">ເພີ່ມຜູ້ໃຊ້</a></li>
+                </div>
+
+                <li><a href="#">ສິດທິພິເສດ</a></li>
+                <li><a href="#">ເຄັດລັບ</a></li>
+                <li><a href="promotion-all.php">ໂປຣໂມຊັນ</a></li>
+                <li><a href="naree_story.php">ເລື່ອງລາວຂອງພວກເຮົາ</a></li>
+                <li><a href="lookbook.php">ກະເປົາແບບຢ່າງ</a></li>
+                <li><a href="contact.php">ຕິດຕໍ່ພວກເຮົາ</a></li>
+                <li class="lang-switch"><a href="<?php echo str_replace('/new-la/', '/new-en/',  $_SERVER['REQUEST_URI']) ?>" style="text-align:center;">ENGLISH </a></li>
+
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</header>
+    </header>
 
     <!--Header-->
 
@@ -730,7 +738,7 @@ function MyCart(){
 
               <li><a href="<?php echo str_replace('/new-la/', '/new-en/', $_SERVER['REQUEST_URI']) ?>" style="  text-align:center">English</a></li>
 
-              
+
               <li><a href="member_login.php" class="txt-nohover"><img src="images/profile.png" alt="" /><?php echo $_SESSION['member_name'] ?></a>
 
                 <ul style="left:-40px;">
@@ -856,7 +864,8 @@ function MyCart(){
         </div>
       <?php } else { ?>
 
-        <?php //include('inc_header.php') ?>
+        <?php //include('inc_header.php') 
+        ?>
 
       <?php } ?>
 
@@ -903,7 +912,7 @@ function MyCart(){
 
                     <tr>
 
-                      <td><img src="images/icon/arrow_left.png" alt="" /> </td>
+                      <td><img src="images/icon/arrow_left_2.png" alt="" /> </td>
 
                       <td>&nbsp;</td>
 
@@ -1102,7 +1111,7 @@ function MyCart(){
               <!--<a href="javascript:void(0);" class="bth-cart" id="add2Cart" onClick="return addtocart('cart');"> -->
               <a href="javascript:void(0);" class="bth-cart" id="add2Cart"><img src="images/icon/i_cart.png" alt="" /> ເພີ່ມໃສ່ກະຕ່າ </a>
 
-              <a href="member_wishlist.php?id=<?php echo $this->item->id ?>" class="bth-wishlist "><img src="images/icon/i_wishlist.png" alt="" />ສິນຄ້າທີ່ຢາກໄດ້</a>
+              <a href="member_wishlist.php?id=<?php echo $this->item->id ?>" class="bth-wishlist "><img src="images/icon/i_wishlist_2.png" alt="" />ສິນຄ້າທີ່ຢາກໄດ້</a>
 
               <div class="clear"></div>
 

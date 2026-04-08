@@ -199,7 +199,7 @@ ul.menu_top li img {
     width: 22px;
     display: inline-block;
     float: left;
-    margin: -2px 5px 0 0
+    margin: -2px 5px 0 0;
 }
 
 .num-items {
@@ -208,16 +208,15 @@ ul.menu_top li img {
     font-weight: bold;
     top: -12px;
     left: -4px;
-    display: table-cell;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     background: #f00;
     border-radius: 100%;
-    height: 19px;
+    height: 22px;
     width: 22px;
     color: #fff;
-    vertical-align: middle;
-    padding-top: 1px;
-    padding-bottom: 3px;
 }
 
 ul.menu_top li:hover .num-items {
@@ -288,7 +287,7 @@ ul.menu_top li a.txt-select:hover {
 .menu ul li a {
     display: block;
     padding: 8px 20px 6px 20px;
-    color: #a3a3a3
+    color: #8c7d77 !important
 }
 
 .menu ul li a:hover {
@@ -423,7 +422,7 @@ ul.menu_top li a.txt-select:hover {
 }
 
 .nav span {
-    color: #7d7d7d;
+    color: #8C7D77;
     text-decoration: underline
 }
 
@@ -551,7 +550,7 @@ p.txt-story {
     right: 0;
     top: -8px;
     width: 25%;
-    z-index: 1000
+    z-index: 20
 }
 
 .product_search input.txt-box {
@@ -565,8 +564,8 @@ p.txt-story {
 
 .product_search input.txt-btn {
     position: absolute;
-    top: -2px;
-    right: 10px
+    top: 7px;
+    right: 24px;
 }
 
 .contentHolder {
@@ -926,7 +925,7 @@ body.has-active-menu {
 
 .box-cart-titlebar {
     position: relative;
-    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-family: 'pt_sansregularSVG', 'pt_sansregular';
     font-size: 18px;
     border-bottom: 1px solid #8C7D77;
     padding: 10px 10px
@@ -956,20 +955,6 @@ body.has-active-menu {
     cursor: pointer
 }
 
-.icon-search-btn {
-    background: none;      /* Removes the grey button background */
-    border: none;          /* Removes the button border */
-    cursor: pointer;       /* Makes it look clickable */
-    color: #8C7D77;        /* Uses your requested theme color */
-    font-size: 24px;       /* Adjusts the icon size */
-    vertical-align: middle; 
-    padding: 0;
-    margin-left: 5px;
-}
-
-.icon-search-btn:hover {
-    opacity: 0.8;          /* Slight fade when hovering */
-}
 
 .your-item {
     width: 20px;
@@ -1389,7 +1374,7 @@ ul.news-list li .box-news img {
 }
 
 .icon-shop .i_mapgoogle {
-    width: 18px !important;  
+    width: 18px !important;
     padding-left: 5px;
 }
 
@@ -2147,7 +2132,7 @@ ul.box-order-tbl li ul li.tdhead {
 
 .step-shop td {
     padding-right: 10px;
-    color: #ddd
+    color: #f9f2f1
 }
 
 .step-shop td.disable td {
@@ -2156,7 +2141,7 @@ ul.box-order-tbl li ul li.tdhead {
 
 .step-shop td.disable .num-step {
     background: #8C7D77;
-    color: #fff
+    color: #f9f2f1
 }
 
 
@@ -2503,8 +2488,8 @@ ul.promotion-all li .box-cation-promo {
     font-weight: normal;
     font-size: 38px;
     line-height: 43px;
-    color: #fff;
-    margin: 30% auto 0 auto;
+    color: #f9f2f1;
+    margin: 26% auto 0 auto;
     width: 70%;
     border: 1px solid #d7d7d7;
     padding: 25px 0 20px 0;
@@ -2541,7 +2526,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-family: 'pt_sansregularSVG', 'pt_sansregular';
     background-color: var(--bg-pink);
     color: var(--dark-grey);
     /* Match the exact light pink of your design */
@@ -2599,7 +2584,7 @@ body {
 .header-right-group {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     /* Space between icons and hamburger */
 }
 
@@ -2608,7 +2593,7 @@ body {
     gap: 15px;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
 .cart-link {
@@ -2618,7 +2603,7 @@ body {
 
 .top-icons a {
     letter-spacing: 1px;
-    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-family: 'saysettha_otregular' !important;
     display: block;
     float: right;
     margin-right: 4px;
@@ -2652,6 +2637,7 @@ body {
     cursor: pointer;
     display: none;
     margin-left: auto;
+    z-index: 900 !important;
 }
 
 /* hide X icon by default */
@@ -2662,6 +2648,7 @@ body {
 /* mobile menu */
 .menu {
     max-height: 0;
+    z-index: 900 !important;
     overflow: hidden;
     transition: 0.3s;
 }
@@ -2671,7 +2658,15 @@ body {
     font-size: 20px !important;
     font-weight: bold;
     display: flex;
-    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-family: 'saysettha_otregular' !important;
+}
+
+.lang-switch-2{
+    align-items: center;
+    font-size: 20px !important;
+    font-weight: bold;
+    display: flex;
+    font-family: 'saysettha_otregular' !important;
 }
 
 /* Ensure the parent is the anchor */
@@ -2689,7 +2684,7 @@ body {
     font-weight: bold;
     border-radius: 20px;
     cursor: pointer;
-    font-family: 'Saysettha OT', 'Noto Sans Lao', sans-serif;
+    font-family: 'pt_sansregularSVG', 'pt_sansregular';
     display: flex;
     align-items: center;
     min-width: 160px;
@@ -2791,6 +2786,7 @@ body {
 }
 
 .nav-links {
+    margin: 0;
     display: flex;
     list-style: none;
     align-items: center;
@@ -2803,7 +2799,7 @@ body {
     text-decoration: none;
     color: #8c7d77;
     font-size: 16px;
-    padding: 4.5px 15px;
+    padding: 7.5px 15px;
     border-radius: 20px;
     transition: all 0.3s ease;
     line-height: 16px;
@@ -2833,7 +2829,7 @@ body {
     align-items: center;
     position: relative;
     flex-direction: column;
-    left:-10%;
+    left: -10%;
     padding-bottom: 20px;
 }
 
@@ -2843,7 +2839,7 @@ body {
     line-height: 0.9;
     color: #8c7d77;
     z-index: 2;
-    left:25%;
+    left: 25%;
 }
 
 
